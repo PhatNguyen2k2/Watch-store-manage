@@ -227,12 +227,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\CTHD.cs" />
     <Compile Include="Model\HOADON.cs" />
     <Compile Include="Model\KHACHHANG.cs" />
@@ -249,9 +243,72 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLYCUAHANGDHDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="View\viewAccountManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewAccountManage.Designer.cs">
+      <DependentUpon>viewAccountManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewBillPaying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewBillPaying.Designer.cs">
+      <DependentUpon>viewBillPaying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewBillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewBillPrint.Designer.cs">
+      <DependentUpon>viewBillPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewBillReportManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewBillReportManage.Designer.cs">
+      <DependentUpon>viewBillReportManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewEmployeeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewEmployeeManage.Designer.cs">
+      <DependentUpon>viewEmployeeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewHomeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewHomeManager.Designer.cs">
+      <DependentUpon>viewHomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewHomeStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewHomeStaff.Designer.cs">
+      <DependentUpon>viewHomeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewHomeStocker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewHomeStocker.Designer.cs">
+      <DependentUpon>viewHomeStocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewLogin.Designer.cs">
+      <DependentUpon>viewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewMainHomeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewMainHomeManager.Designer.cs">
+      <DependentUpon>viewMainHomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewReportManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewReportManage.Designer.cs">
+      <DependentUpon>viewReportManage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -260,8 +317,42 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\Test.rdlc" />
+    <EmbeddedResource Include="View\viewBillPrint.rdlc" />
+    <EmbeddedResource Include="View\viewAccountManage.resx">
+      <DependentUpon>viewAccountManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewBillPaying.resx">
+      <DependentUpon>viewBillPaying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewBillPrint.resx">
+      <DependentUpon>viewBillPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewBillReportManage.resx">
+      <DependentUpon>viewBillReportManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewEmployeeManage.resx">
+      <DependentUpon>viewEmployeeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewHomeManager.resx">
+      <DependentUpon>viewHomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewHomeStaff.resx">
+      <DependentUpon>viewHomeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewHomeStocker.resx">
+      <DependentUpon>viewHomeStocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewLogin.resx">
+      <DependentUpon>viewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewMainHomeManager.resx">
+      <DependentUpon>viewMainHomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewReportManage.resx">
+      <DependentUpon>viewReportManage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -287,7 +378,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-account-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-out-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-page-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paid-bill-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistics-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-watches-front-view-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oggy-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bliss_%28Windows_XP%29 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
