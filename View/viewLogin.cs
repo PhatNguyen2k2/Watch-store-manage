@@ -16,6 +16,7 @@ namespace WatchStoreManage.View
 {
     public partial class viewLogin : Form
     {
+        public static String EmployeeId = "";
         public viewLogin()
         {
             InitializeComponent();
@@ -72,6 +73,7 @@ namespace WatchStoreManage.View
             NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.PASSWORDS == txtcode.Text);
             if (nv != null)
             {
+                EmployeeId = nv.MANV;
                 switch (nv.MANV.Substring(0, 4))
                 {
                     case "NVTN":
