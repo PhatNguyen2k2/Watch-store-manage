@@ -94,5 +94,28 @@ namespace WatchStoreManage.View
                 }
             });
         }
+
+        private void tblBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = tblBill.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void tblBill_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (txtId.Text == "") return;
+                List<CTHD> cthd = Program.context.CTHDs.Where(n => n.SOHD.ToString() == txtId.Text).ToList();
+                cthd.ForEach(x =>
+                {
+                    Program.context.CTHDs.Remove(x);
+                });
+                Program.context.SaveChanges();
+                HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                Program.context.HOADONs.Remove(hd);
+                Program.context.SaveChanges();
+                txtId.Text = "";
+            }
+        }
     }
 }

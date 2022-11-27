@@ -20,9 +20,9 @@ namespace WatchStoreManage
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new View.viewLogin());
-            //Application.Run(new View.viewHomeManager());
+            Application.Run(new View.viewHomeManager());
             //Application.Run(new View.viewHomeStocker());
-            Application.Run(new View.viewHomeStaff());
+            //Application.Run(new View.viewHomeStaff());
         }
     }
 }

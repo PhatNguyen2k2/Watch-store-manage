@@ -235,14 +235,10 @@
     <Compile Include="Model\context.cs" />
     <Compile Include="Model\NHACUNGCAP.cs" />
     <Compile Include="Model\NHANVIEN.cs" />
+    <Compile Include="Model\PrintBill.cs" />
     <Compile Include="Model\SANPHAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUANLYCUAHANGDHDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QUANLYCUAHANGDHDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\viewAccountManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +350,7 @@
       <DependentUpon>viewReportManage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WatchStoreManage.Model.PrintBill.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -363,17 +360,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QUANLYCUAHANGDHDataSet.xsc">
-      <DependentUpon>QUANLYCUAHANGDHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QUANLYCUAHANGDHDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QUANLYCUAHANGDHDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QUANLYCUAHANGDHDataSet.xss">
-      <DependentUpon>QUANLYCUAHANGDHDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
