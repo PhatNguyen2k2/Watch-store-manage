@@ -17,6 +17,7 @@ namespace WatchStoreManage.View
 {
     public partial class viewBillPaying : Form
     {
+        public static String billId = "";
         public viewBillPaying()
         {
             InitializeComponent();
@@ -286,6 +287,7 @@ namespace WatchStoreManage.View
                 case Keys.P:
                     {
                         if (txtId.Text == "") return;
+                        billId = txtId.Text;
                         viewBillPrint viewBillPrint = new viewBillPrint();
                         viewBillPrint.Show();
                     }

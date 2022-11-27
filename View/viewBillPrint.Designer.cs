@@ -29,73 +29,37 @@ namespace WatchStoreManage.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.qUANLYCUAHANGDHDataSet = new WatchStoreManage.QUANLYCUAHANGDHDataSet();
-            this.qUANLYCUAHANGDHDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cTHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cTHDTableAdapter = new WatchStoreManage.QUANLYCUAHANGDHDataSetTableAdapters.CTHDTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYCUAHANGDHDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYCUAHANGDHDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).BeginInit();
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // reportViewer
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.cTHDBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WatchStoreManage.View.viewBillPrint.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // qUANLYCUAHANGDHDataSet
-            // 
-            this.qUANLYCUAHANGDHDataSet.DataSetName = "QUANLYCUAHANGDHDataSet";
-            this.qUANLYCUAHANGDHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qUANLYCUAHANGDHDataSetBindingSource
-            // 
-            this.qUANLYCUAHANGDHDataSetBindingSource.DataSource = this.qUANLYCUAHANGDHDataSet;
-            this.qUANLYCUAHANGDHDataSetBindingSource.Position = 0;
-            // 
-            // cTHDBindingSource
-            // 
-            this.cTHDBindingSource.DataMember = "CTHD";
-            this.cTHDBindingSource.DataSource = this.qUANLYCUAHANGDHDataSetBindingSource;
-            // 
-            // cTHDTableAdapter
-            // 
-            this.cTHDTableAdapter.ClearBeforeFill = true;
+            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "WatchStoreManage.View.viewBillPrint.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.ServerReport.BearerToken = null;
+            this.reportViewer.ShowContextMenu = false;
+            this.reportViewer.ShowDocumentMapButton = false;
+            this.reportViewer.Size = new System.Drawing.Size(817, 587);
+            this.reportViewer.TabIndex = 0;
             // 
             // viewBillPrint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(817, 587);
+            this.Controls.Add(this.reportViewer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewBillPrint";
             this.Text = "viewBillPrint";
             this.Load += new System.EventHandler(this.viewBillPrint_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYCUAHANGDHDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYCUAHANGDHDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private QUANLYCUAHANGDHDataSet qUANLYCUAHANGDHDataSet;
-        private System.Windows.Forms.BindingSource qUANLYCUAHANGDHDataSetBindingSource;
-        private System.Windows.Forms.BindingSource cTHDBindingSource;
-        private QUANLYCUAHANGDHDataSetTableAdapters.CTHDTableAdapter cTHDTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }
