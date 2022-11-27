@@ -29,6 +29,7 @@ namespace WatchStoreManage.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,13 +43,11 @@ namespace WatchStoreManage.View
             this.tblBillDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cbCamera = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtTime = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSum = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtProductId = new Guna.UI2.WinForms.Guna2TextBox();
             this.barcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SL = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtName = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,6 +56,11 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pic = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Timer(this.components);
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBillDetail)).BeginInit();
@@ -70,7 +74,7 @@ namespace WatchStoreManage.View
             this.nudAmount.BorderThickness = 2;
             this.nudAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudAmount.Location = new System.Drawing.Point(841, 132);
+            this.nudAmount.Location = new System.Drawing.Point(841, 174);
             this.nudAmount.Name = "nudAmount";
             this.nudAmount.Size = new System.Drawing.Size(100, 36);
             this.nudAmount.TabIndex = 71;
@@ -89,7 +93,7 @@ namespace WatchStoreManage.View
             this.txtFind.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFind.IconLeft = global::WatchStoreManage.Properties.Resources.icons8_search_20;
-            this.txtFind.Location = new System.Drawing.Point(769, 588);
+            this.txtFind.Location = new System.Drawing.Point(769, 630);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderText = "";
@@ -102,7 +106,7 @@ namespace WatchStoreManage.View
             // 
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(428, 907);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(428, 947);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(108, 15);
             this.guna2HtmlLabel6.TabIndex = 69;
@@ -131,7 +135,7 @@ namespace WatchStoreManage.View
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblBill.DefaultCellStyle = dataGridViewCellStyle15;
             this.tblBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tblBill.Location = new System.Drawing.Point(14, 630);
+            this.tblBill.Location = new System.Drawing.Point(14, 672);
             this.tblBill.Name = "tblBill";
             this.tblBill.RowHeadersVisible = false;
             this.tblBill.RowHeadersWidth = 51;
@@ -184,7 +188,7 @@ namespace WatchStoreManage.View
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblBillDetail.DefaultCellStyle = dataGridViewCellStyle18;
             this.tblBillDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tblBillDetail.Location = new System.Drawing.Point(493, 185);
+            this.tblBillDetail.Location = new System.Drawing.Point(493, 227);
             this.tblBillDetail.Name = "tblBillDetail";
             this.tblBillDetail.RowHeadersVisible = false;
             this.tblBillDetail.RowHeadersWidth = 51;
@@ -226,7 +230,7 @@ namespace WatchStoreManage.View
             this.cbCamera.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbCamera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCamera.ItemHeight = 30;
-            this.cbCamera.Location = new System.Drawing.Point(14, 132);
+            this.cbCamera.Location = new System.Drawing.Point(14, 174);
             this.cbCamera.Name = "cbCamera";
             this.cbCamera.Size = new System.Drawing.Size(460, 36);
             this.cbCamera.TabIndex = 65;
@@ -245,31 +249,10 @@ namespace WatchStoreManage.View
             this.cbStatus.Items.AddRange(new object[] {
             "Đã thanh toán",
             "Chưa thanh toán"});
-            this.cbStatus.Location = new System.Drawing.Point(338, 44);
+            this.cbStatus.Location = new System.Drawing.Point(338, 86);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(217, 36);
             this.cbStatus.TabIndex = 64;
-            // 
-            // txtTime
-            // 
-            this.txtTime.BorderRadius = 5;
-            this.txtTime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTime.DefaultText = "";
-            this.txtTime.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTime.Location = new System.Drawing.Point(675, 44);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.PasswordChar = '\0';
-            this.txtTime.PlaceholderText = "";
-            this.txtTime.ReadOnly = true;
-            this.txtTime.SelectedText = "";
-            this.txtTime.Size = new System.Drawing.Size(271, 36);
-            this.txtTime.TabIndex = 62;
             // 
             // txtSum
             // 
@@ -283,7 +266,7 @@ namespace WatchStoreManage.View
             this.txtSum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSum.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSum.Location = new System.Drawing.Point(788, 497);
+            this.txtSum.Location = new System.Drawing.Point(788, 539);
             this.txtSum.Name = "txtSum";
             this.txtSum.PasswordChar = '\0';
             this.txtSum.PlaceholderText = "";
@@ -304,7 +287,7 @@ namespace WatchStoreManage.View
             this.txtProductId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProductId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProductId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductId.Location = new System.Drawing.Point(493, 132);
+            this.txtProductId.Location = new System.Drawing.Point(493, 174);
             this.txtProductId.Name = "txtProductId";
             this.txtProductId.PasswordChar = '\0';
             this.txtProductId.PlaceholderText = "";
@@ -328,7 +311,7 @@ namespace WatchStoreManage.View
             this.barcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.barcode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.barcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.barcode.Location = new System.Drawing.Point(272, 497);
+            this.barcode.Location = new System.Drawing.Point(272, 539);
             this.barcode.Name = "barcode";
             this.barcode.PasswordChar = '\0';
             this.barcode.PlaceholderText = "";
@@ -350,7 +333,7 @@ namespace WatchStoreManage.View
             this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Location = new System.Drawing.Point(57, 44);
+            this.txtId.Location = new System.Drawing.Point(57, 86);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
             this.txtId.PlaceholderText = "";
@@ -365,29 +348,18 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(241, 56);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(241, 98);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(161, 24);
             this.guna2HtmlLabel4.TabIndex = 58;
             this.guna2HtmlLabel4.Text = "Trạng thái:";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(578, 56);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(104, 24);
-            this.guna2HtmlLabel2.TabIndex = 57;
-            this.guna2HtmlLabel2.Text = "Thời gian:";
             // 
             // SL
             // 
             this.SL.AutoSize = false;
             this.SL.BackColor = System.Drawing.Color.Transparent;
             this.SL.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SL.Location = new System.Drawing.Point(841, 102);
+            this.SL.Location = new System.Drawing.Point(841, 144);
             this.SL.Name = "SL";
             this.SL.Size = new System.Drawing.Size(105, 24);
             this.SL.TabIndex = 56;
@@ -398,7 +370,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(727, 509);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(727, 551);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 24);
             this.guna2HtmlLabel8.TabIndex = 55;
@@ -409,7 +381,7 @@ namespace WatchStoreManage.View
             this.txtName.AutoSize = false;
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(493, 102);
+            this.txtName.Location = new System.Drawing.Point(493, 144);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(148, 24);
             this.txtName.TabIndex = 54;
@@ -420,7 +392,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(14, 102);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(14, 144);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(139, 24);
             this.guna2HtmlLabel5.TabIndex = 53;
@@ -431,7 +403,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(15, 56);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(15, 98);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 24);
             this.guna2HtmlLabel3.TabIndex = 52;
@@ -442,7 +414,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 562);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 604);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(506, 40);
             this.guna2HtmlLabel7.TabIndex = 51;
@@ -466,7 +438,7 @@ namespace WatchStoreManage.View
             this.pic.BorderRadius = 6;
             this.pic.FillColor = System.Drawing.Color.Gainsboro;
             this.pic.ImageRotate = 0F;
-            this.pic.Location = new System.Drawing.Point(14, 185);
+            this.pic.Location = new System.Drawing.Point(14, 227);
             this.pic.Name = "pic";
             this.pic.Size = new System.Drawing.Size(460, 306);
             this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -476,12 +448,70 @@ namespace WatchStoreManage.View
             this.pic.Click += new System.EventHandler(this.pic_Click);
             this.pic.DoubleClick += new System.EventHandler(this.pic_DoubleClick);
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(14, 48);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(47, 22);
+            this.lblDate.TabIndex = 73;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(334, 48);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(50, 22);
+            this.lblTime.TabIndex = 72;
+            this.lblTime.Text = "Time";
+            // 
+            // time
+            // 
+            this.time.Tick += new System.EventHandler(this.time_Tick);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 98);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(77, 24);
+            this.guna2HtmlLabel2.TabIndex = 58;
+            this.guna2HtmlLabel2.Text = "SĐT:";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BorderRadius = 5;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Location = new System.Drawing.Point(709, 86);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.PlaceholderText = "";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(158, 36);
+            this.txtPhone.TabIndex = 61;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
+            // 
             // viewBillPaying
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(972, 633);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.nudAmount);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -490,13 +520,13 @@ namespace WatchStoreManage.View
             this.Controls.Add(this.pic);
             this.Controls.Add(this.cbCamera);
             this.Controls.Add(this.cbStatus);
-            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtSum);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.barcode);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.SL);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.txtName);
@@ -513,6 +543,7 @@ namespace WatchStoreManage.View
             ((System.ComponentModel.ISupportInitialize)(this.tblBillDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -526,13 +557,11 @@ namespace WatchStoreManage.View
         private Guna.UI2.WinForms.Guna2PictureBox pic;
         private Guna.UI2.WinForms.Guna2ComboBox cbCamera;
         private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
-        private Guna.UI2.WinForms.Guna2TextBox txtTime;
         private Guna.UI2.WinForms.Guna2TextBox txtSum;
         private Guna.UI2.WinForms.Guna2TextBox txtProductId;
         private Guna.UI2.WinForms.Guna2TextBox barcode;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel SL;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtName;
@@ -540,5 +569,10 @@ namespace WatchStoreManage.View
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer time;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
     }
 }

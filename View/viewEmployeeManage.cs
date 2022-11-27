@@ -70,7 +70,7 @@ namespace WatchStoreManage.View
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
-            if (txtPhone.TextLength > 11 || txtPhone.TextLength < 10 || txtPhone.Text.Substring(0, 1) != "0")
+            if (txtPhone.TextLength > 11 || txtPhone.Text.Substring(0, 1) != "0")
             {
                 MessageBox.Show("SĐT không hợp lí\nHint: 10 hoặc 11 số và số 0 ở đầu :>");
                 txtPhone.Text = "";

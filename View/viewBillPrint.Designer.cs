@@ -50,7 +50,7 @@ namespace WatchStoreManage.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 587);
             this.Controls.Add(this.reportViewer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "viewBillPrint";
             this.Text = "viewBillPrint";
             this.Load += new System.EventHandler(this.viewBillPrint_Load);

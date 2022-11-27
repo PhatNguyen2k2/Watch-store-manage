@@ -18,6 +18,7 @@ namespace WatchStoreManage.View
     public partial class viewBillPaying : Form
     {
         public static String billId = "";
+        int customerId;
         public viewBillPaying()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace WatchStoreManage.View
             cbCamera.SelectedIndex = 1;
             cbStatus.SelectedIndex = 1;
             initTableBill();
+            time.Start();
         }
         public void initTableBillDetail()
         {
@@ -206,6 +208,9 @@ namespace WatchStoreManage.View
         private void tblBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = tblBill.Rows[e.RowIndex].Cells[0].Value.ToString();
+            HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+            KHACHHANG kh = Program.context.KHACHHANGs.FirstOrDefault(n => n.MAKH == hd.MAKH);
+            txtPhone.Text = kh.SDT;
             tblBillDetail.DataSource = null;
             initTableBillDetail();
             using (var sqlConnection = new SqlConnection(Program.connectionString))
@@ -236,7 +241,7 @@ namespace WatchStoreManage.View
                     {
                         HOADON newBill = new HOADON
                         {
-                            MAKH = 6,
+                            MAKH = 9,
                             MANV = viewLogin.EmployeeId,
                             NGAYLAPHOADON = DateTime.Now,
                             TRANGTHAI = cbStatus.SelectedItem.ToString()
@@ -248,6 +253,7 @@ namespace WatchStoreManage.View
                         barcode.Text = "";
                         txtProductId.Text = "";
                         nudAmount.Value = 0;
+                        txtPhone.Text = "";
                         txtSum.Text = "";
                         tblBillDetail.DataSource = null;
                         initTableBill();
@@ -256,10 +262,27 @@ namespace WatchStoreManage.View
                 case Keys.S:
                     {
                         if (txtId.Text == "") return;
-                        HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
-                        hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
-                        hd.NGAYLAPHOADON = DateTime.Now;
-                        Program.context.SaveChanges();
+                        if(txtPhone.Text != "")
+                        {
+                            KHACHHANG kh = Program.context.KHACHHANGs.FirstOrDefault(n => n.SDT == txtPhone.Text);
+                            if(kh == null)
+                            {
+                                MessageBox.Show("Không có Khách hàng này");
+                                return;
+                            }
+                            customerId = kh.MAKH;
+                            HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                            hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                            hd.NGAYLAPHOADON = DateTime.Now;
+                            hd.MAKH = customerId;
+                            Program.context.SaveChanges();
+                        }
+                        else {
+                            HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                            hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                            hd.NGAYLAPHOADON = DateTime.Now;
+                            Program.context.SaveChanges();
+                        }
                         initTableBill();
                     }
                     break;
@@ -279,6 +302,7 @@ namespace WatchStoreManage.View
                         txtProductId.Text = "";
                         nudAmount.Value = 0;
                         barcode.Text = "";
+                        txtPhone.Text = "";
                         txtSum.Text = "";
                         tblBillDetail.DataSource = null;
                         initTableBill();
@@ -287,7 +311,26 @@ namespace WatchStoreManage.View
                 case Keys.P:
                     {
                         if (txtId.Text == "") return;
+                        if (txtPhone.Text != "")
+                        {
+                            KHACHHANG kh = Program.context.KHACHHANGs.FirstOrDefault(n => n.SDT == txtPhone.Text);
+                            if (kh == null)
+                            {
+                                MessageBox.Show("Không có Khách hàng này");
+                                return;
+                            }
+                            customerId = kh.MAKH;
+                            HOADON hd1 = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                            hd1.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                            hd1.NGAYLAPHOADON = DateTime.Now;
+                            hd1.MAKH = customerId;
+                            Program.context.SaveChanges();
+                        }
                         billId = txtId.Text;
+                        HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                        hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                        hd.NGAYLAPHOADON = DateTime.Now;
+                        Program.context.SaveChanges();
                         viewBillPrint viewBillPrint = new viewBillPrint();
                         viewBillPrint.Show();
                     }
@@ -296,6 +339,21 @@ namespace WatchStoreManage.View
                     {
                         return;
                     }
+            }
+        }
+
+        private void time_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhone.TextLength > 11 || txtPhone.Text.Substring(0, 1) != "0")
+            {
+                MessageBox.Show("SĐT không hợp lí\nHint: 10 hoặc 11 số và số 0 ở đầu :>");
+                txtPhone.Text = "";
             }
         }
     }
