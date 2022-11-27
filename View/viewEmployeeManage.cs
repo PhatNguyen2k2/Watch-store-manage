@@ -70,9 +70,9 @@ namespace WatchStoreManage.View
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
-            if (txtPhone.TextLength > 11 || txtPhone.Text.Substring(0, 1) != "0")
+            if (txtPhone.TextLength > 11)
             {
-                MessageBox.Show("SĐT không hợp lí\nHint: 10 hoặc 11 số và số 0 ở đầu :>");
+                MessageBox.Show("SĐT không hợp lí\nHint: 10 hoặc 11 số :>");
                 txtPhone.Text = "";
             }
         }
@@ -82,6 +82,9 @@ namespace WatchStoreManage.View
             if (txtId.Text == "" || txtName.Text == "" || txtPhone.Text == "" || txtAddress.Text == "" || cbPosition.SelectedIndex == -1)
             {
                 MessageBox.Show("Không được để trống trường nào");
+            }else if (txtPhone.Text.Substring(0, 1) != "0" || txtPhone.Text.Length < 10)
+            {
+                MessageBox.Show("SĐT không hợp lệ");
             }
             else if (dateTimeBirth.Value >= dateTimeIn.Value)
             {
