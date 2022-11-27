@@ -16,8 +16,7 @@ namespace WatchStoreManage.Model
         }
 
         [Key]
-        [StringLength(10)]
-        public string MAKH { get; set; }
+        public int MAKH { get; set; }
 
         [Required]
         [StringLength(200)]

@@ -58,7 +58,7 @@ namespace WatchStoreManage.View
             List<HOADON> hd = null;
             if (txtFind != null)
             {
-                hd = Program.context.HOADONs.Where(n => n.TRANGTHAI == "Chưa thanh toán" && (n.SOHD.ToString().Contains(txtFind.Text) || n.MANV.Contains(txtFind.Text) || n.MAKH.Contains(txtFind.Text))).ToList();
+                hd = Program.context.HOADONs.Where(n => n.TRANGTHAI == "Chưa thanh toán" && (n.SOHD.ToString().Contains(txtFind.Text) || n.MANV.Contains(txtFind.Text) || n.MAKH.ToString().Contains(txtFind.Text))).ToList();
             }
             else hd = Program.context.HOADONs.Where(n => n.TRANGTHAI == "Chưa thanh toán").ToList();
             DataTable table = new DataTable();
@@ -236,7 +236,7 @@ namespace WatchStoreManage.View
                     {
                         HOADON newBill = new HOADON
                         {
-                            MAKH = "KH6",
+                            MAKH = 6,
                             MANV = viewLogin.EmployeeId,
                             NGAYLAPHOADON = DateTime.Now,
                             TRANGTHAI = cbStatus.SelectedItem.ToString()

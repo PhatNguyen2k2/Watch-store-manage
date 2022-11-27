@@ -22,9 +22,7 @@ namespace WatchStoreManage.Model
         [StringLength(10)]
         public string MANV { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string MAKH { get; set; }
+        public int MAKH { get; set; }
 
         public DateTime NGAYLAPHOADON { get; set; }
 

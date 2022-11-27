@@ -40,10 +40,6 @@ namespace WatchStoreManage.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<HOADON>()
-                .Property(e => e.MAKH)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HOADON>()
                 .Property(e => e.THANHTIENHD)
                 .HasPrecision(18, 0);
 
@@ -51,10 +47,6 @@ namespace WatchStoreManage.Model
                 .HasMany(e => e.CTHDs)
                 .WithRequired(e => e.HOADON)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<KHACHHANG>()
-                .Property(e => e.MAKH)
-                .IsUnicode(false);
 
             modelBuilder.Entity<KHACHHANG>()
                 .Property(e => e.SDT)
