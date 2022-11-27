@@ -102,19 +102,32 @@ namespace WatchStoreManage.View
 
         private void tblBill_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete)
+            switch (e.KeyCode)
             {
-                if (txtId.Text == "") return;
-                List<CTHD> cthd = Program.context.CTHDs.Where(n => n.SOHD.ToString() == txtId.Text).ToList();
-                cthd.ForEach(x =>
-                {
-                    Program.context.CTHDs.Remove(x);
-                });
-                Program.context.SaveChanges();
-                HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
-                Program.context.HOADONs.Remove(hd);
-                Program.context.SaveChanges();
-                txtId.Text = "";
+                case Keys.Delete:
+                    {
+                        if (txtId.Text == "") return;
+                        List<CTHD> cthd = Program.context.CTHDs.Where(n => n.SOHD.ToString() == txtId.Text).ToList();
+                        cthd.ForEach(x =>
+                        {
+                            Program.context.CTHDs.Remove(x);
+                        });
+                        Program.context.SaveChanges();
+                        HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                        Program.context.HOADONs.Remove(hd);
+                        Program.context.SaveChanges();
+                        txtId.Text = "";
+                    }
+                    break;
+                case Keys.D:
+                    {
+                        if (txtId.Text == "") return;
+                        viewBillPaying.billId = txtId.Text;
+                        viewBillPrint viewBillPrint = new viewBillPrint();
+                        viewBillPrint.Show();
+                    }
+                    break;
+                default:    return;
             }
         }
     }

@@ -243,8 +243,10 @@ namespace WatchStoreManage.View
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblBill.DefaultCellStyle = dataGridViewCellStyle6;
             this.tblBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tblBill.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tblBill.Location = new System.Drawing.Point(12, 456);
             this.tblBill.Name = "tblBill";
+            this.tblBill.ReadOnly = true;
             this.tblBill.RowHeadersVisible = false;
             this.tblBill.RowHeadersWidth = 51;
             this.tblBill.RowTemplate.Height = 24;
@@ -263,7 +265,7 @@ namespace WatchStoreManage.View
             this.tblBill.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tblBill.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tblBill.ThemeStyle.HeaderStyle.Height = 19;
-            this.tblBill.ThemeStyle.ReadOnly = false;
+            this.tblBill.ThemeStyle.ReadOnly = true;
             this.tblBill.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.tblBill.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tblBill.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,10 +331,12 @@ namespace WatchStoreManage.View
             this.txtId.FillColor = System.Drawing.SystemColors.Control;
             this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.Location = new System.Drawing.Point(12, 414);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = ' ';
+            this.txtId.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtId.PlaceholderText = "";
             this.txtId.ReadOnly = true;
             this.txtId.SelectedText = "";
