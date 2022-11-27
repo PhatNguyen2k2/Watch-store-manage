@@ -237,7 +237,7 @@ namespace WatchStoreManage.View
                         HOADON newBill = new HOADON
                         {
                             MAKH = "KH6",
-                            MANV = "NVTN001",
+                            MANV = viewLogin.EmployeeId,
                             NGAYLAPHOADON = DateTime.Now,
                             TRANGTHAI = cbStatus.SelectedItem.ToString()
                         };
