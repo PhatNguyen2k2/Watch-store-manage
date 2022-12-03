@@ -93,7 +93,7 @@ namespace WatchStoreManage.View
             this.txtFind.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFind.IconLeft = global::WatchStoreManage.Properties.Resources.icons8_search_20;
-            this.txtFind.Location = new System.Drawing.Point(769, 630);
+            this.txtFind.Location = new System.Drawing.Point(769, 696);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderText = "";
@@ -135,7 +135,7 @@ namespace WatchStoreManage.View
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblBill.DefaultCellStyle = dataGridViewCellStyle3;
             this.tblBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tblBill.Location = new System.Drawing.Point(14, 672);
+            this.tblBill.Location = new System.Drawing.Point(14, 738);
             this.tblBill.Name = "tblBill";
             this.tblBill.ReadOnly = true;
             this.tblBill.RowHeadersVisible = false;
@@ -416,7 +416,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 604);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 670);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(506, 40);
             this.guna2HtmlLabel7.TabIndex = 51;

@@ -69,7 +69,8 @@ namespace WatchStoreManage.View
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            submenuReport.Visible = true;
+            ClickReport.Start();
+
         }
 
         private void btnAccMana_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace WatchStoreManage.Model
         [StringLength(200)]
         public string DIACHI { get; set; }
 
-        [StringLength(10)]
+        [StringLength(500)]
         public string PASSWORDS { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

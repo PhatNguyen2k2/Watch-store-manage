@@ -30,7 +30,7 @@ namespace WatchStoreManage.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation7 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewHomeStocker));
             this.guna2Panel_Control_Big = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton_Report = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -107,6 +107,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton_Report.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton_Report.TextOffset = new System.Drawing.Point(20, 0);
             this.guna2GradientButton_Report.UseTransparentBackground = true;
+            this.guna2GradientButton_Report.Click += new System.EventHandler(this.guna2GradientButton_Report_Click);
             // 
             // guna2Panel_Control_CProduct
             // 
@@ -155,6 +156,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton_DealProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton_DealProduct.TextOffset = new System.Drawing.Point(40, 0);
             this.guna2GradientButton_DealProduct.UseTransparentBackground = true;
+            this.guna2GradientButton_DealProduct.Click += new System.EventHandler(this.guna2GradientButton_DealProduct_Click);
             // 
             // guna2GradientButton_ProductManage
             // 
@@ -189,6 +191,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton_ProductManage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton_ProductManage.TextOffset = new System.Drawing.Point(40, 0);
             this.guna2GradientButton_ProductManage.UseTransparentBackground = true;
+            this.guna2GradientButton_ProductManage.Click += new System.EventHandler(this.guna2GradientButton_ProductManage_Click);
             // 
             // guna2GradientButton_Product
             // 
@@ -223,6 +226,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton_Product.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton_Product.TextOffset = new System.Drawing.Point(20, 0);
             this.guna2GradientButton_Product.UseTransparentBackground = true;
+            this.guna2GradientButton_Product.Click += new System.EventHandler(this.guna2GradientButton_Product_Click);
             // 
             // guna2GradientButton_Home
             // 
@@ -257,6 +261,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton_Home.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton_Home.TextOffset = new System.Drawing.Point(20, 0);
             this.guna2GradientButton_Home.UseTransparentBackground = true;
+            this.guna2GradientButton_Home.Click += new System.EventHandler(this.guna2GradientButton_Home_Click);
             // 
             // guna2GradientButton2
             // 
@@ -345,22 +350,22 @@ namespace WatchStoreManage.View
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation7;
             // 
             // guna2Panel1
             // 
@@ -455,10 +460,12 @@ namespace WatchStoreManage.View
             // DetectMouse
             // 
             this.DetectMouse.Enabled = true;
+            this.DetectMouse.Tick += new System.EventHandler(this.DetectMouse_Tick);
             // 
             // Timer_Product
             // 
             this.Timer_Product.Interval = 10;
+            this.Timer_Product.Tick += new System.EventHandler(this.Timer_Product_Tick);
             // 
             // guna2Elipse1
             // 

@@ -293,6 +293,12 @@
     <Compile Include="View\viewLogin.Designer.cs">
       <DependentUpon>viewLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\viewLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewLogin2.Designer.cs">
+      <DependentUpon>viewLogin2.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\viewMainHomeManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewLogin.resx">
       <DependentUpon>viewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewLogin2.resx">
+      <DependentUpon>viewLogin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewMainHomeManager.resx">
       <DependentUpon>viewMainHomeManager.cs</DependentUpon>

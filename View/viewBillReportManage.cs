@@ -34,6 +34,8 @@ namespace WatchStoreManage.View
                     i++;
                 }
             });
+            cbYear.SelectedIndex = cbYear.Items.Count-1;
+            cbMonth.SelectedIndex = cbMonth.Items.Count-1;
         }
         public void initIncome()
         {

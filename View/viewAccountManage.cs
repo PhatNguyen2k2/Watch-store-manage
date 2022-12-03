@@ -42,14 +42,12 @@ namespace WatchStoreManage.View
             table.Columns.Add("Id", typeof(string));
             table.Columns.Add("Tên", typeof(string));
             table.Columns.Add("Chức vụ", typeof(string));
-            table.Columns.Add("Password", typeof(string));
             nv.ForEach(x =>
             {
                 var rowDT = table.NewRow();
                 rowDT["Id"] = x.MANV;
                 rowDT["Tên"] = x.TENNV;
                 rowDT["Chức vụ"] = x.CHUCVU;
-                rowDT["Password"] = x.PASSWORDS;
                 table.Rows.Add(rowDT);
             });
             tbl.DataSource = table;
@@ -59,7 +57,6 @@ namespace WatchStoreManage.View
             cbId.SelectedItem = tbl.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtName.Text = tbl.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtPosition.Text = tbl.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtAccount.Text = tbl.Rows[e.RowIndex].Cells[3].Value.ToString();
             btnAdd.Hide();
         }
 
@@ -68,7 +65,11 @@ namespace WatchStoreManage.View
             NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == cbId.SelectedItem.ToString());
             txtName.Text = nv.TENNV;
             txtPosition.Text = nv.CHUCVU;
-            txtAccount.Text = nv.PASSWORDS;
+            if(nv.PASSWORDS == null)
+            {
+                txtAccount.Text = "";
+            }
+            else txtAccount.Text = viewLogin.DecodeFrom64(nv.PASSWORDS);
             if (txtAccount.Text == "")
             {
                 btnAdd.Show();
@@ -79,7 +80,7 @@ namespace WatchStoreManage.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == cbId.SelectedItem.ToString());
-            nv.PASSWORDS = txtAccount.Text;
+            nv.PASSWORDS = viewLogin.EncodePasswordToBase64(txtAccount.Text);
             Program.context.SaveChanges();
             MessageBox.Show("Thêm thành công");
             initTable();
@@ -97,7 +98,7 @@ namespace WatchStoreManage.View
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == cbId.SelectedItem.ToString());
-            nv.PASSWORDS = txtAccount.Text;
+            nv.PASSWORDS = viewLogin.EncodePasswordToBase64(txtAccount.Text);
             Program.context.SaveChanges();
             MessageBox.Show("Sửa thành công");
             initTable();
