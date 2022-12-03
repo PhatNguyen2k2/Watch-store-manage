@@ -58,21 +58,21 @@ namespace WatchStoreManage.View
         {
             List<HOADON> hd = Program.context.HOADONs.Where(n => n.NGAYLAPHOADON.Year.ToString() == cbYear.SelectedItem.ToString() && n.NGAYLAPHOADON.Month.ToString() == cbMonth.SelectedItem.ToString()).ToList();
             DataTable table = new DataTable();
-            table.Columns.Add("Số HĐ", typeof(string));
-            table.Columns.Add("Mã NV", typeof(string));
-            table.Columns.Add("Mã KH", typeof(string));
-            table.Columns.Add("Ngày lập", typeof(DateTime));
-            table.Columns.Add("Thành tiền", typeof(decimal));
-            table.Columns.Add("Trạng thái", typeof(string));
+            table.Columns.Add("Id", typeof(string));
+            table.Columns.Add("Emp id", typeof(string));
+            table.Columns.Add("Cus id", typeof(string));
+            table.Columns.Add("Time", typeof(DateTime));
+            table.Columns.Add("Total", typeof(decimal));
+            table.Columns.Add("Status", typeof(string));
             hd.ForEach(x =>
             {
                 var rowDT = table.NewRow();
-                rowDT["Số HĐ"] = x.SOHD;
-                rowDT["Mã NV"] = x.MANV;
-                rowDT["Mã KH"] = x.MAKH;
-                rowDT["Ngày lập"] = x.NGAYLAPHOADON;
-                rowDT["Thành tiền"] = x.THANHTIENHD;
-                rowDT["Trạng thái"] = x.TRANGTHAI;
+                rowDT["Id"] = x.SOHD;
+                rowDT["Emp id"] = x.MANV;
+                rowDT["Cus id"] = x.MAKH;
+                rowDT["Time"] = x.NGAYLAPHOADON;
+                rowDT["Total"] = x.THANHTIENHD;
+                rowDT["Status"] = x.TRANGTHAI;
                 table.Rows.Add(rowDT);
             });
             tblBill.DataSource = table;

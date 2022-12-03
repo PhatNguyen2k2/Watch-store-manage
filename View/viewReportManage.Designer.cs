@@ -328,11 +328,11 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(395, 648);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(426, 648);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(207, 36);
             this.guna2HtmlLabel4.TabIndex = 57;
-            this.guna2HtmlLabel4.Text = "Sản phẩm trong kho";
+            this.guna2HtmlLabel4.Text = "List Of Product";
             // 
             // cbYear
             // 
@@ -373,22 +373,22 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(684, 296);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(696, 296);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(126, 32);
             this.guna2HtmlLabel2.TabIndex = 52;
-            this.guna2HtmlLabel2.Text = "Số lượng tồn";
+            this.guna2HtmlLabel2.Text = "Inventory";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(123, 93);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(174, 93);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(234, 36);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(147, 36);
             this.guna2HtmlLabel3.TabIndex = 53;
-            this.guna2HtmlLabel3.Text = "Sản phẩm bán chạy";
+            this.guna2HtmlLabel3.Text = "Best seller";
             // 
             // viewReportManage
             // 

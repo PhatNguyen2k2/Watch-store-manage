@@ -350,11 +350,11 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(241, 98);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(272, 98);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(161, 24);
             this.guna2HtmlLabel4.TabIndex = 58;
-            this.guna2HtmlLabel4.Text = "Trạng thái:";
+            this.guna2HtmlLabel4.Text = "Status:";
             // 
             // SL
             // 
@@ -365,18 +365,18 @@ namespace WatchStoreManage.View
             this.SL.Name = "SL";
             this.SL.Size = new System.Drawing.Size(105, 24);
             this.SL.TabIndex = 56;
-            this.SL.Text = "Số lượng:";
+            this.SL.Text = "Amount:";
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(727, 551);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(725, 551);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 24);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(96, 24);
             this.guna2HtmlLabel8.TabIndex = 55;
-            this.guna2HtmlLabel8.Text = "Tổng:";
+            this.guna2HtmlLabel8.Text = "Total:";
             // 
             // txtName
             // 
@@ -387,7 +387,7 @@ namespace WatchStoreManage.View
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(148, 24);
             this.txtName.TabIndex = 54;
-            this.txtName.Text = "Mã sản phẩm:";
+            this.txtName.Text = "Product id:";
             // 
             // guna2HtmlLabel5
             // 
@@ -409,18 +409,18 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 24);
             this.guna2HtmlLabel3.TabIndex = 52;
-            this.guna2HtmlLabel3.Text = "Số:";
+            this.guna2HtmlLabel3.Text = "No:";
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 670);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(370, 669);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(506, 40);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(329, 40);
             this.guna2HtmlLabel7.TabIndex = 51;
-            this.guna2HtmlLabel7.Text = "Danh sách Hóa đơn chưa thanh toán";
+            this.guna2HtmlLabel7.Text = "List Of Unpaid Bill";
             // 
             // guna2HtmlLabel1
             // 
@@ -479,11 +479,11 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 98);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(642, 98);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(77, 24);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(90, 24);
             this.guna2HtmlLabel2.TabIndex = 58;
-            this.guna2HtmlLabel2.Text = "SĐT:";
+            this.guna2HtmlLabel2.Text = "Phone:";
             // 
             // txtPhone
             // 

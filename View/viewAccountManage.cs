@@ -40,14 +40,14 @@ namespace WatchStoreManage.View
             else nv = Program.context.NHANVIENs.Where(n => n.PASSWORDS != null).OrderBy(n => n.TENNV).ToList();
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(string));
-            table.Columns.Add("Tên", typeof(string));
-            table.Columns.Add("Chức vụ", typeof(string));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Position", typeof(string));
             nv.ForEach(x =>
             {
                 var rowDT = table.NewRow();
                 rowDT["Id"] = x.MANV;
-                rowDT["Tên"] = x.TENNV;
-                rowDT["Chức vụ"] = x.CHUCVU;
+                rowDT["Name"] = x.TENNV;
+                rowDT["Position"] = x.CHUCVU;
                 table.Rows.Add(rowDT);
             });
             tbl.DataSource = table;

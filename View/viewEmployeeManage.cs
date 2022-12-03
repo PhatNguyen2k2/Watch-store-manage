@@ -28,24 +28,24 @@ namespace WatchStoreManage.View
             else nv = Program.context.NHANVIENs.OrderBy(n => n.TENNV).ToList();
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(string));
-            table.Columns.Add("Tên", typeof(string));
-            table.Columns.Add("Ngày sinh", typeof(DateTime));
-            table.Columns.Add("SĐT", typeof(string));
-            table.Columns.Add("Chức vụ", typeof(string));
-            table.Columns.Add("Địa chỉ", typeof(string));
-            table.Columns.Add("Ngày vào", typeof(DateTime));
-            table.Columns.Add("Lương", typeof(decimal));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Birthday", typeof(DateTime));
+            table.Columns.Add("Phone", typeof(string));
+            table.Columns.Add("Position", typeof(string));
+            table.Columns.Add("Address", typeof(string));
+            table.Columns.Add("Date in", typeof(DateTime));
+            table.Columns.Add("Salary", typeof(decimal));
             nv.ForEach(x =>
             {
                 var rowDT = table.NewRow();
                 rowDT["Id"] = x.MANV;
-                rowDT["Tên"] = x.TENNV;
-                rowDT["Ngày sinh"] = x.NGAYSINH;
-                rowDT["SĐT"] = x.SDT;
-                rowDT["Chức vụ"] = x.CHUCVU;
-                rowDT["Địa chỉ"] = x.DIACHI;
-                rowDT["Ngày vào"] = x.NGAYVAOLAM;
-                rowDT["Lương"] = x.LUONG;
+                rowDT["Name"] = x.TENNV;
+                rowDT["Birthday"] = x.NGAYSINH;
+                rowDT["Phone"] = x.SDT;
+                rowDT["Position"] = x.CHUCVU;
+                rowDT["Address"] = x.DIACHI;
+                rowDT["Date in"] = x.NGAYVAOLAM;
+                rowDT["Salary"] = x.LUONG;
                 table.Rows.Add(rowDT);
             });
             tbl.DataSource = table;

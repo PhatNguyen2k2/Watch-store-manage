@@ -77,7 +77,7 @@ namespace WatchStoreManage.View
             this.saveQR.Name = "saveQR";
             this.saveQR.Size = new System.Drawing.Size(112, 37);
             this.saveQR.TabIndex = 63;
-            this.saveQR.Text = "LƯU QR";
+            this.saveQR.Text = "SAVE QR";
             this.saveQR.Click += new System.EventHandler(this.saveQR_Click);
             // 
             // btnDelete
@@ -97,7 +97,7 @@ namespace WatchStoreManage.View
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 45);
             this.btnDelete.TabIndex = 62;
-            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Text = "DELETE";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
@@ -117,7 +117,7 @@ namespace WatchStoreManage.View
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(105, 45);
             this.btnUpdate.TabIndex = 61;
-            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
@@ -137,7 +137,7 @@ namespace WatchStoreManage.View
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 45);
             this.btnAdd.TabIndex = 60;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "ADD";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtPosition
@@ -212,7 +212,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(87, 24);
             this.guna2HtmlLabel5.TabIndex = 54;
-            this.guna2HtmlLabel5.Text = "Tài khoản:";
+            this.guna2HtmlLabel5.Text = "Password:";
             // 
             // guna2HtmlLabel4
             // 
@@ -223,7 +223,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(75, 24);
             this.guna2HtmlLabel4.TabIndex = 55;
-            this.guna2HtmlLabel4.Text = "Chức vụ:";
+            this.guna2HtmlLabel4.Text = "Position:";
             // 
             // txtName
             // 
@@ -255,7 +255,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(71, 24);
             this.guna2HtmlLabel3.TabIndex = 52;
-            this.guna2HtmlLabel3.Text = "Tên NV:";
+            this.guna2HtmlLabel3.Text = "Name:";
             // 
             // guna2HtmlLabel2
             // 
@@ -266,7 +266,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(67, 24);
             this.guna2HtmlLabel2.TabIndex = 51;
-            this.guna2HtmlLabel2.Text = "Mã NV:";
+            this.guna2HtmlLabel2.Text = "Emp id:";
             // 
             // cbId
             // 

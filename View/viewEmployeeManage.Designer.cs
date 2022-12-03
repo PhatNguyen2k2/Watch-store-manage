@@ -29,9 +29,9 @@ namespace WatchStoreManage.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -76,7 +76,7 @@ namespace WatchStoreManage.View
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 45);
             this.btnDelete.TabIndex = 67;
-            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Text = "DELETE";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
@@ -96,7 +96,7 @@ namespace WatchStoreManage.View
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(105, 45);
             this.btnUpdate.TabIndex = 66;
-            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
@@ -116,31 +116,31 @@ namespace WatchStoreManage.View
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 45);
             this.btnAdd.TabIndex = 65;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "ADD";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbl
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.tbl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.tbl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tbl.ColumnHeadersHeight = 19;
             this.tbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbl.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbl.DefaultCellStyle = dataGridViewCellStyle6;
             this.tbl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbl.Location = new System.Drawing.Point(12, 397);
             this.tbl.Name = "tbl";
@@ -249,7 +249,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel4.TabIndex = 54;
-            this.guna2HtmlLabel4.Text = "Ngày sinh:";
+            this.guna2HtmlLabel4.Text = "Birthday:";
             // 
             // txtAddress
             // 
@@ -302,7 +302,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(90, 24);
             this.guna2HtmlLabel6.TabIndex = 53;
-            this.guna2HtmlLabel6.Text = "Chức vụ:";
+            this.guna2HtmlLabel6.Text = "Position:";
             // 
             // guna2HtmlLabel2
             // 
@@ -313,7 +313,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(71, 24);
             this.guna2HtmlLabel2.TabIndex = 51;
-            this.guna2HtmlLabel2.Text = "Tên NV:";
+            this.guna2HtmlLabel2.Text = "Name:";
             // 
             // guna2HtmlLabel10
             // 
@@ -324,7 +324,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(120, 24);
             this.guna2HtmlLabel10.TabIndex = 50;
-            this.guna2HtmlLabel10.Text = "Tên hoặc Mã:";
+            this.guna2HtmlLabel10.Text = "Name or Id:";
             // 
             // guna2HtmlLabel7
             // 
@@ -333,9 +333,9 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(662, 174);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(71, 24);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel7.TabIndex = 49;
-            this.guna2HtmlLabel7.Text = "Địa chỉ:";
+            this.guna2HtmlLabel7.Text = "Address:";
             // 
             // guna2HtmlLabel9
             // 
@@ -346,7 +346,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(71, 24);
             this.guna2HtmlLabel9.TabIndex = 48;
-            this.guna2HtmlLabel9.Text = "Lương:";
+            this.guna2HtmlLabel9.Text = "Salary:";
             // 
             // txtPhone
             // 
@@ -378,7 +378,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 24);
             this.guna2HtmlLabel5.TabIndex = 47;
-            this.guna2HtmlLabel5.Text = "SĐT:";
+            this.guna2HtmlLabel5.Text = "Phone:";
             // 
             // guna2HtmlLabel8
             // 
@@ -389,7 +389,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(109, 24);
             this.guna2HtmlLabel8.TabIndex = 46;
-            this.guna2HtmlLabel8.Text = "Ngày vào:";
+            this.guna2HtmlLabel8.Text = "Date in:";
             // 
             // txtId
             // 
@@ -421,7 +421,7 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(71, 24);
             this.guna2HtmlLabel3.TabIndex = 52;
-            this.guna2HtmlLabel3.Text = "Mã NV:";
+            this.guna2HtmlLabel3.Text = "Emp id:";
             // 
             // guna2HtmlLabel1
             // 

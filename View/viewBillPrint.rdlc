@@ -162,7 +162,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Mã HD</Value>
+                    <Value>BILL ID</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -229,7 +229,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Mã NV</Value>
+                    <Value>EMP ID</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -265,7 +265,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Ngày lập HD</Value>
+                    <Value>TIME</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -301,7 +301,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Mã KH</Value>
+                    <Value>CUS ID</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -497,7 +497,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Thành tiền:</Value>
+                    <Value>Total:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -659,7 +659,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Trạng thái:</Value>
+                    <Value>Status:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>

@@ -54,24 +54,24 @@ namespace WatchStoreManage.View
             else sp = Program.context.SANPHAMs.ToList();
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(string));
-            table.Columns.Add("Tên", typeof(string));
-            table.Columns.Add("Số lượng", typeof(int));
-            table.Columns.Add("Giá mua", typeof(decimal));
-            table.Columns.Add("Giá bán", typeof(decimal));
-            table.Columns.Add("Mã loại", typeof(string));
-            table.Columns.Add("Mã NCC", typeof(string));
-            table.Columns.Add("Ảnh", typeof(byte[]));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Amount", typeof(int));
+            table.Columns.Add("Price in", typeof(decimal));
+            table.Columns.Add("Price out", typeof(decimal));
+            table.Columns.Add("Type id", typeof(string));
+            table.Columns.Add("Supplier id", typeof(string));
+            table.Columns.Add("Image", typeof(byte[]));
             sp.ForEach(x =>
             {
                 var rowDT = table.NewRow();
                 rowDT["Id"] = x.MASP;
-                rowDT["Tên"] = x.TENSP;
-                rowDT["Số lượng"] = x.SOLUONG;
-                rowDT["Giá mua"] = x.GIAMUA;
-                rowDT["Giá bán"] = x.GIABAN;
-                rowDT["Mã loại"] = x.MALSP;
-                rowDT["Mã NCC"] = x.MANCC;
-                rowDT["Ảnh"] = x.HinhAnh;
+                rowDT["Name"] = x.TENSP;
+                rowDT["Amount"] = x.SOLUONG;
+                rowDT["Price in"] = x.GIAMUA;
+                rowDT["Price ount"] = x.GIABAN;
+                rowDT["Type idi"] = x.MALSP;
+                rowDT["Supplier id"] = x.MANCC;
+                rowDT["Image"] = x.HinhAnh;
                 table.Rows.Add(rowDT);
             });
             tblProduct.DataSource = table;
