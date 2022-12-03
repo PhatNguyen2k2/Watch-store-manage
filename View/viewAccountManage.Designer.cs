@@ -115,7 +115,7 @@ namespace WatchStoreManage.View
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(242, 409);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(105, 45);
+            this.btnUpdate.Size = new System.Drawing.Size(118, 45);
             this.btnUpdate.TabIndex = 61;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);

@@ -356,5 +356,104 @@ namespace WatchStoreManage.View
                 txtPhone.Text = "";
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            HOADON newBill = new HOADON
+            {
+                MAKH = 9,
+                MANV = viewLogin.EmployeeId,
+                NGAYLAPHOADON = DateTime.Now,
+                TRANGTHAI = cbStatus.SelectedItem.ToString()
+            };
+            Program.context.HOADONs.Add(newBill);
+            Program.context.SaveChanges();
+            HOADON hd = Program.context.HOADONs.OrderByDescending(n => n.SOHD).First();
+            txtId.Text = hd.SOHD.ToString();
+            barcode.Text = "";
+            txtProductId.Text = "";
+            nudAmount.Value = 0;
+            txtPhone.Text = "";
+            txtSum.Text = "";
+            tblBillDetail.DataSource = null;
+            initTableBill();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "") return;
+            if (txtPhone.Text != "")
+            {
+                KHACHHANG kh = Program.context.KHACHHANGs.FirstOrDefault(n => n.SDT == txtPhone.Text);
+                if (kh == null)
+                {
+                    MessageBox.Show("Không có Khách hàng này");
+                    return;
+                }
+                customerId = kh.MAKH;
+                HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                hd.NGAYLAPHOADON = DateTime.Now;
+                hd.MAKH = customerId;
+                Program.context.SaveChanges();
+            }
+            else
+            {
+                HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                hd.NGAYLAPHOADON = DateTime.Now;
+                Program.context.SaveChanges();
+            }
+            initTableBill();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "") return;
+            List<CTHD> cthd = Program.context.CTHDs.Where(n => n.SOHD.ToString() == txtId.Text).ToList();
+            cthd.ForEach(x =>
+            {
+                Program.context.CTHDs.Remove(x);
+            });
+            Program.context.SaveChanges();
+            HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+            Program.context.HOADONs.Remove(hd);
+            Program.context.SaveChanges();
+            txtId.Text = "";
+            txtProductId.Text = "";
+            nudAmount.Value = 0;
+            barcode.Text = "";
+            txtPhone.Text = "";
+            txtSum.Text = "";
+            tblBillDetail.DataSource = null;
+            initTableBill();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "") return;
+            if (txtPhone.Text != "")
+            {
+                KHACHHANG kh = Program.context.KHACHHANGs.FirstOrDefault(n => n.SDT == txtPhone.Text);
+                if (kh == null)
+                {
+                    MessageBox.Show("Không có Khách hàng này");
+                    return;
+                }
+                customerId = kh.MAKH;
+                HOADON hd1 = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+                hd1.TRANGTHAI = cbStatus.SelectedItem.ToString();
+                hd1.NGAYLAPHOADON = DateTime.Now;
+                hd1.MAKH = customerId;
+                Program.context.SaveChanges();
+            }
+            billId = txtId.Text;
+            HOADON hd = Program.context.HOADONs.FirstOrDefault(n => n.SOHD.ToString() == txtId.Text);
+            hd.TRANGTHAI = cbStatus.SelectedItem.ToString();
+            hd.NGAYLAPHOADON = DateTime.Now;
+            Program.context.SaveChanges();
+            viewBillPrint viewBillPrint = new viewBillPrint();
+            viewBillPrint.Show();
+        }
     }
 }

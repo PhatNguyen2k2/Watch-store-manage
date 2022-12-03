@@ -33,6 +33,8 @@ namespace WatchStoreManage.View
             });
             cbMonth.Hide();
             initTable();
+            cbYear.SelectedIndex = cbYear.Items.Count - 1;
+            cbMonth.SelectedIndex = cbMonth.Items.Count - 1;
         }
         public void initProduct()
         {
@@ -68,8 +70,8 @@ namespace WatchStoreManage.View
                 rowDT["Name"] = x.TENSP;
                 rowDT["Amount"] = x.SOLUONG;
                 rowDT["Price in"] = x.GIAMUA;
-                rowDT["Price ount"] = x.GIABAN;
-                rowDT["Type idi"] = x.MALSP;
+                rowDT["Price out"] = x.GIABAN;
+                rowDT["Type id"] = x.MALSP;
                 rowDT["Supplier id"] = x.MANCC;
                 rowDT["Image"] = x.HinhAnh;
                 table.Rows.Add(rowDT);
