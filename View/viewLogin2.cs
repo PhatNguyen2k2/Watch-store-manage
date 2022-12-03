@@ -69,7 +69,7 @@ namespace WatchStoreManage.View
 
         private void txtcode_TextChanged(object sender, EventArgs e)
         {
-            NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.PASSWORDS == txtcode.Text);
+            NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => viewLogin.DecodeFrom64(n.PASSWORDS) == txtcode.Text);
             if (nv != null)
             {
                 viewLogin.EmployeeId = nv.MANV;
