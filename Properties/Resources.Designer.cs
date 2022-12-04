@@ -103,6 +103,16 @@ namespace WatchStoreManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_menu_rounded_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menu-rounded-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_paid_bill_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-paid-bill-30", resourceCulture);
@@ -113,9 +123,29 @@ namespace WatchStoreManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_picture_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_picture_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_search_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
