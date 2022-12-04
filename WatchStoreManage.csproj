@@ -239,6 +239,18 @@
     <Compile Include="Model\SANPHAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\CF_DealProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CF_DealProduct.Designer.cs">
+      <DependentUpon>CF_DealProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CF_ProcductManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CF_ProcductManage.Designer.cs">
+      <DependentUpon>CF_ProcductManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\viewAccountManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +333,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CF_DealProduct.resx">
+      <DependentUpon>CF_DealProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CF_ProcductManage.resx">
+      <DependentUpon>CF_ProcductManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\viewBillPrint.rdlc" />
     <EmbeddedResource Include="View\viewAccountManage.resx">
       <DependentUpon>viewAccountManage.cs</DependentUpon>
@@ -403,7 +421,15 @@
   <ItemGroup>
     <None Include="Resources\Bliss_%28Windows_XP%29 %281%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-search-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-rounded-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
