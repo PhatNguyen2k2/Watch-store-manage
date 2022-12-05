@@ -93,6 +93,16 @@ namespace WatchStoreManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_facebook_messenger {
+            get {
+                object obj = ResourceManager.GetObject("icons8-facebook-messenger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_page_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-page-30", resourceCulture);
@@ -186,6 +196,36 @@ namespace WatchStoreManage.Properties {
         internal static System.Drawing.Bitmap Oggy_modified {
             get {
                 object obj = ResourceManager.GetObject("Oggy_modified", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watchImage1 {
+            get {
+                object obj = ResourceManager.GetObject("watchImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watchImage2 {
+            get {
+                object obj = ResourceManager.GetObject("watchImage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watchImage3 {
+            get {
+                object obj = ResourceManager.GetObject("watchImage3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
