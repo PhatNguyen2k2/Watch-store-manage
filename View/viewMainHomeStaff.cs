@@ -1,5 +1,4 @@
-﻿using WatchStoreManage.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,22 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WatchStoreManage.Model;
 
 namespace WatchStoreManage.View
 {
-    public partial class viewMainHomeManager : Form
+    public partial class viewMainHomeStaff : Form
     {
-        public viewMainHomeManager()
+        public viewMainHomeStaff()
         {
             InitializeComponent();
         }
 
-        private void viewMainHomeManager_Load(object sender, EventArgs e)
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            tabControlMess.Hide();
-            initTableFrom();
-            initTableTo();
-            initComboBoxPosition();
+            tabControlMess.Show();
         }
         public void initTableFrom()
         {
@@ -113,11 +110,6 @@ namespace WatchStoreManage.View
             }
         }
 
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-            tabControlMess.Show();
-        }
-
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             tabControlMess.Hide();
@@ -133,5 +125,97 @@ namespace WatchStoreManage.View
             tabControlMess.Hide();
         }
 
+        private void viewMainHomeStaff_Load(object sender, EventArgs e)
+        {
+            tabControlMess.Hide();
+            initTableFrom();
+            initTableTo();
+            initComboBoxPosition();
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void send_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTime1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContent1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void get_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTime2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFrom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContent2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void set_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNameP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContent3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

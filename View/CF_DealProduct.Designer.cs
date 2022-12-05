@@ -30,16 +30,18 @@ namespace WatchStoreManage.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_DealProduct));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtNewprice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_Title = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnListdeal = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -63,10 +65,8 @@ namespace WatchStoreManage.View
             this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel_View = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel_ShowProduct = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtNewprice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox_Product = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel_ListProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_Product_Deal)).BeginInit();
@@ -83,18 +83,65 @@ namespace WatchStoreManage.View
             this.guna2Panel2.Controls.Add(this.lb_Title);
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(972, 81);
+            this.guna2Panel2.Size = new System.Drawing.Size(1296, 100);
             this.guna2Panel2.TabIndex = 10;
+            // 
+            // txtNewprice
+            // 
+            this.txtNewprice.AutoRoundedCorners = true;
+            this.txtNewprice.BorderRadius = 21;
+            this.txtNewprice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewprice.DefaultText = "";
+            this.txtNewprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNewprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNewprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewprice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNewprice.HoverState.BorderColor = System.Drawing.SystemColors.Control;
+            this.txtNewprice.Location = new System.Drawing.Point(612, 38);
+            this.txtNewprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewprice.Name = "txtNewprice";
+            this.txtNewprice.PasswordChar = '\0';
+            this.txtNewprice.PlaceholderText = "New price";
+            this.txtNewprice.SelectedText = "";
+            this.txtNewprice.Size = new System.Drawing.Size(341, 44);
+            this.txtNewprice.TabIndex = 3;
+            this.txtNewprice.IconRightClick += new System.EventHandler(this.txtNewprice_IconRightClick);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.BorderRadius = 21;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.SystemColors.Control;
+            this.txtSearch.Location = new System.Drawing.Point(245, 38);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Search by name";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(341, 44);
+            this.txtSearch.TabIndex = 2;
             // 
             // lb_Title
             // 
             this.lb_Title.AutoSize = true;
             this.lb_Title.Font = new System.Drawing.Font("Segoe UI Black", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Title.Location = new System.Drawing.Point(5, 26);
+            this.lb_Title.Location = new System.Drawing.Point(7, 32);
+            this.lb_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Padding = new System.Windows.Forms.Padding(0, 5, 50, 5);
-            this.lb_Title.Size = new System.Drawing.Size(178, 35);
+            this.lb_Title.Padding = new System.Windows.Forms.Padding(0, 6, 67, 6);
+            this.lb_Title.Size = new System.Drawing.Size(220, 42);
             this.lb_Title.TabIndex = 1;
             this.lb_Title.Text = "Deal Product";
             // 
@@ -103,9 +150,10 @@ namespace WatchStoreManage.View
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(7, 65);
+            this.guna2Separator1.Location = new System.Drawing.Point(9, 80);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(953, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(1271, 12);
             this.guna2Separator1.TabIndex = 0;
             // 
             // btnListdeal
@@ -113,7 +161,7 @@ namespace WatchStoreManage.View
             this.btnListdeal.Animated = true;
             this.btnListdeal.AnimatedGIF = true;
             this.btnListdeal.AutoRoundedCorners = true;
-            this.btnListdeal.BorderRadius = 14;
+            this.btnListdeal.BorderRadius = 17;
             this.btnListdeal.CustomizableEdges.BottomLeft = false;
             this.btnListdeal.CustomizableEdges.TopLeft = false;
             this.btnListdeal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -125,9 +173,10 @@ namespace WatchStoreManage.View
             this.btnListdeal.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
             this.btnListdeal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListdeal.ForeColor = System.Drawing.Color.White;
-            this.btnListdeal.Location = new System.Drawing.Point(383, 17);
+            this.btnListdeal.Location = new System.Drawing.Point(511, 21);
+            this.btnListdeal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListdeal.Name = "btnListdeal";
-            this.btnListdeal.Size = new System.Drawing.Size(101, 30);
+            this.btnListdeal.Size = new System.Drawing.Size(135, 37);
             this.btnListdeal.TabIndex = 23;
             this.btnListdeal.Text = "List deal";
             this.btnListdeal.Click += new System.EventHandler(this.btnListdeal_Click);
@@ -139,9 +188,10 @@ namespace WatchStoreManage.View
             this.guna2Panel_ListProduct.Controls.Add(this.btnInventory);
             this.guna2Panel_ListProduct.Controls.Add(this.DataGridView_Product_Deal);
             this.guna2Panel_ListProduct.Controls.Add(this.DataGridView_Product_Inventory);
-            this.guna2Panel_ListProduct.Location = new System.Drawing.Point(459, 87);
+            this.guna2Panel_ListProduct.Location = new System.Drawing.Point(288, -50);
+            this.guna2Panel_ListProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel_ListProduct.Name = "guna2Panel_ListProduct";
-            this.guna2Panel_ListProduct.Size = new System.Drawing.Size(513, 592);
+            this.guna2Panel_ListProduct.Size = new System.Drawing.Size(684, 729);
             this.guna2Panel_ListProduct.TabIndex = 12;
             // 
             // btnInventory
@@ -149,7 +199,7 @@ namespace WatchStoreManage.View
             this.btnInventory.Animated = true;
             this.btnInventory.AnimatedGIF = true;
             this.btnInventory.AutoRoundedCorners = true;
-            this.btnInventory.BorderRadius = 14;
+            this.btnInventory.BorderRadius = 17;
             this.btnInventory.CustomizableEdges.BottomRight = false;
             this.btnInventory.CustomizableEdges.TopRight = false;
             this.btnInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -161,9 +211,10 @@ namespace WatchStoreManage.View
             this.btnInventory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
             this.btnInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.Location = new System.Drawing.Point(282, 17);
+            this.btnInventory.Location = new System.Drawing.Point(376, 21);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(101, 30);
+            this.btnInventory.Size = new System.Drawing.Size(135, 37);
             this.btnInventory.TabIndex = 21;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
@@ -172,35 +223,36 @@ namespace WatchStoreManage.View
             // 
             this.DataGridView_Product_Deal.AllowUserToResizeColumns = false;
             this.DataGridView_Product_Deal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.DataGridView_Product_Deal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.DataGridView_Product_Deal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView_Product_Deal.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_Product_Deal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView_Product_Deal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView_Product_Deal.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_Product_Deal.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView_Product_Deal.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_Product_Deal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Product_Deal.Location = new System.Drawing.Point(16, 63);
+            this.DataGridView_Product_Deal.Location = new System.Drawing.Point(21, 78);
+            this.DataGridView_Product_Deal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridView_Product_Deal.Name = "DataGridView_Product_Deal";
             this.DataGridView_Product_Deal.RowHeadersVisible = false;
             this.DataGridView_Product_Deal.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DataGridView_Product_Deal.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataGridView_Product_Deal.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView_Product_Deal.RowTemplate.Height = 24;
-            this.DataGridView_Product_Deal.Size = new System.Drawing.Size(483, 514);
+            this.DataGridView_Product_Deal.Size = new System.Drawing.Size(644, 633);
             this.DataGridView_Product_Deal.TabIndex = 7;
             this.DataGridView_Product_Deal.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_Product_Deal.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -230,35 +282,36 @@ namespace WatchStoreManage.View
             // 
             this.DataGridView_Product_Inventory.AllowUserToResizeColumns = false;
             this.DataGridView_Product_Inventory.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.DataGridView_Product_Inventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.DataGridView_Product_Inventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView_Product_Inventory.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_Product_Inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView_Product_Inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridView_Product_Inventory.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView_Product_Inventory.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView_Product_Inventory.DefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridView_Product_Inventory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_Product_Inventory.Location = new System.Drawing.Point(16, 63);
+            this.DataGridView_Product_Inventory.Location = new System.Drawing.Point(21, 78);
+            this.DataGridView_Product_Inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridView_Product_Inventory.Name = "DataGridView_Product_Inventory";
             this.DataGridView_Product_Inventory.RowHeadersVisible = false;
             this.DataGridView_Product_Inventory.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DataGridView_Product_Inventory.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataGridView_Product_Inventory.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridView_Product_Inventory.RowTemplate.Height = 24;
-            this.DataGridView_Product_Inventory.Size = new System.Drawing.Size(483, 514);
+            this.DataGridView_Product_Inventory.Size = new System.Drawing.Size(644, 633);
             this.DataGridView_Product_Inventory.TabIndex = 0;
             this.DataGridView_Product_Inventory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_Product_Inventory.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -291,10 +344,11 @@ namespace WatchStoreManage.View
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(11, -3);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(15, -4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Padding = new System.Windows.Forms.Padding(0, 0, 17, 0);
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(63, 21);
+            this.guna2HtmlLabel1.Padding = new System.Windows.Forms.Padding(0, 0, 23, 0);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(83, 27);
             this.guna2HtmlLabel1.TabIndex = 10;
             this.guna2HtmlLabel1.Text = "Details";
             // 
@@ -312,12 +366,13 @@ namespace WatchStoreManage.View
             this.txtQuanity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuanity.ForeColor = System.Drawing.Color.Black;
             this.txtQuanity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuanity.Location = new System.Drawing.Point(152, 425);
+            this.txtQuanity.Location = new System.Drawing.Point(203, 523);
+            this.txtQuanity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuanity.Name = "txtQuanity";
             this.txtQuanity.PasswordChar = '\0';
             this.txtQuanity.PlaceholderText = "";
             this.txtQuanity.SelectedText = "";
-            this.txtQuanity.Size = new System.Drawing.Size(269, 36);
+            this.txtQuanity.Size = new System.Drawing.Size(359, 44);
             this.txtQuanity.TabIndex = 5;
             this.txtQuanity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -325,10 +380,11 @@ namespace WatchStoreManage.View
             // 
             this.lbQuanity.BackColor = System.Drawing.Color.Transparent;
             this.lbQuanity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuanity.Location = new System.Drawing.Point(152, 393);
+            this.lbQuanity.Location = new System.Drawing.Point(203, 484);
+            this.lbQuanity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbQuanity.Name = "lbQuanity";
-            this.lbQuanity.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbQuanity.Size = new System.Drawing.Size(95, 21);
+            this.lbQuanity.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbQuanity.Size = new System.Drawing.Size(124, 26);
             this.lbQuanity.TabIndex = 9;
             this.lbQuanity.Text = "Quanity";
             // 
@@ -346,12 +402,13 @@ namespace WatchStoreManage.View
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(152, 351);
+            this.txtPrice.Location = new System.Drawing.Point(203, 432);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(269, 36);
+            this.txtPrice.Size = new System.Drawing.Size(359, 44);
             this.txtPrice.TabIndex = 4;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -359,10 +416,11 @@ namespace WatchStoreManage.View
             // 
             this.lbPrice.BackColor = System.Drawing.Color.Transparent;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(152, 319);
+            this.lbPrice.Location = new System.Drawing.Point(203, 393);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbPrice.Size = new System.Drawing.Size(79, 21);
+            this.lbPrice.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbPrice.Size = new System.Drawing.Size(104, 26);
             this.lbPrice.TabIndex = 8;
             this.lbPrice.Text = "Price";
             // 
@@ -380,12 +438,13 @@ namespace WatchStoreManage.View
             this.txtPurchaseprice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPurchaseprice.ForeColor = System.Drawing.Color.Black;
             this.txtPurchaseprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPurchaseprice.Location = new System.Drawing.Point(152, 277);
+            this.txtPurchaseprice.Location = new System.Drawing.Point(203, 341);
+            this.txtPurchaseprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPurchaseprice.Name = "txtPurchaseprice";
             this.txtPurchaseprice.PasswordChar = '\0';
             this.txtPurchaseprice.PlaceholderText = "";
             this.txtPurchaseprice.SelectedText = "";
-            this.txtPurchaseprice.Size = new System.Drawing.Size(269, 36);
+            this.txtPurchaseprice.Size = new System.Drawing.Size(359, 44);
             this.txtPurchaseprice.TabIndex = 3;
             this.txtPurchaseprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -393,10 +452,11 @@ namespace WatchStoreManage.View
             // 
             this.lbPurchaseprice.BackColor = System.Drawing.Color.Transparent;
             this.lbPurchaseprice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPurchaseprice.Location = new System.Drawing.Point(152, 245);
+            this.lbPurchaseprice.Location = new System.Drawing.Point(203, 302);
+            this.lbPurchaseprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbPurchaseprice.Name = "lbPurchaseprice";
-            this.lbPurchaseprice.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbPurchaseprice.Size = new System.Drawing.Size(130, 21);
+            this.lbPurchaseprice.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbPurchaseprice.Size = new System.Drawing.Size(170, 26);
             this.lbPurchaseprice.TabIndex = 7;
             this.lbPurchaseprice.Text = "Purchase price";
             // 
@@ -414,12 +474,13 @@ namespace WatchStoreManage.View
             this.txtProducer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProducer.ForeColor = System.Drawing.Color.Black;
             this.txtProducer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProducer.Location = new System.Drawing.Point(152, 203);
+            this.txtProducer.Location = new System.Drawing.Point(203, 250);
+            this.txtProducer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProducer.Name = "txtProducer";
             this.txtProducer.PasswordChar = '\0';
             this.txtProducer.PlaceholderText = "";
             this.txtProducer.SelectedText = "";
-            this.txtProducer.Size = new System.Drawing.Size(269, 36);
+            this.txtProducer.Size = new System.Drawing.Size(359, 44);
             this.txtProducer.TabIndex = 2;
             this.txtProducer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -427,10 +488,11 @@ namespace WatchStoreManage.View
             // 
             this.lbProducer.BackColor = System.Drawing.Color.Transparent;
             this.lbProducer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProducer.Location = new System.Drawing.Point(152, 171);
+            this.lbProducer.Location = new System.Drawing.Point(203, 210);
+            this.lbProducer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbProducer.Name = "lbProducer";
-            this.lbProducer.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbProducer.Size = new System.Drawing.Size(101, 21);
+            this.lbProducer.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbProducer.Size = new System.Drawing.Size(133, 26);
             this.lbProducer.TabIndex = 6;
             this.lbProducer.Text = "Producer";
             // 
@@ -448,12 +510,13 @@ namespace WatchStoreManage.View
             this.txtType.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtType.ForeColor = System.Drawing.Color.Black;
             this.txtType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtType.Location = new System.Drawing.Point(155, 129);
+            this.txtType.Location = new System.Drawing.Point(207, 159);
+            this.txtType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtType.Name = "txtType";
             this.txtType.PasswordChar = '\0';
             this.txtType.PlaceholderText = "";
             this.txtType.SelectedText = "";
-            this.txtType.Size = new System.Drawing.Size(269, 36);
+            this.txtType.Size = new System.Drawing.Size(359, 44);
             this.txtType.TabIndex = 1;
             this.txtType.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -461,10 +524,11 @@ namespace WatchStoreManage.View
             // 
             this.lbType.BackColor = System.Drawing.Color.Transparent;
             this.lbType.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbType.Location = new System.Drawing.Point(155, 97);
+            this.lbType.Location = new System.Drawing.Point(207, 119);
+            this.lbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbType.Name = "lbType";
-            this.lbType.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbType.Size = new System.Drawing.Size(79, 21);
+            this.lbType.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbType.Size = new System.Drawing.Size(103, 26);
             this.lbType.TabIndex = 5;
             this.lbType.Text = "Type";
             // 
@@ -482,12 +546,13 @@ namespace WatchStoreManage.View
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(155, 55);
+            this.txtName.Location = new System.Drawing.Point(207, 68);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(269, 36);
+            this.txtName.Size = new System.Drawing.Size(359, 44);
             this.txtName.TabIndex = 0;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -495,10 +560,11 @@ namespace WatchStoreManage.View
             // 
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(155, 23);
+            this.lbName.Location = new System.Drawing.Point(207, 28);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbName.Name = "lbName";
-            this.lbName.Padding = new System.Windows.Forms.Padding(0, 2, 50, 2);
-            this.lbName.Size = new System.Drawing.Size(85, 21);
+            this.lbName.Padding = new System.Windows.Forms.Padding(0, 2, 67, 2);
+            this.lbName.Size = new System.Drawing.Size(111, 26);
             this.lbName.TabIndex = 4;
             this.lbName.Text = "Name";
             // 
@@ -508,8 +574,9 @@ namespace WatchStoreManage.View
             this.guna2Panel_View.Controls.Add(this.guna2Panel_ShowProduct);
             this.guna2Panel_View.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel_View.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel_View.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel_View.Name = "guna2Panel_View";
-            this.guna2Panel_View.Size = new System.Drawing.Size(453, 681);
+            this.guna2Panel_View.Size = new System.Drawing.Size(604, 681);
             this.guna2Panel_View.TabIndex = 11;
             // 
             // guna2Panel_ShowProduct
@@ -532,81 +599,40 @@ namespace WatchStoreManage.View
             this.guna2Panel_ShowProduct.Controls.Add(this.txtName);
             this.guna2Panel_ShowProduct.Controls.Add(this.lbName);
             this.guna2Panel_ShowProduct.Controls.Add(this.guna2PictureBox_Product);
-            this.guna2Panel_ShowProduct.Location = new System.Drawing.Point(10, 87);
+            this.guna2Panel_ShowProduct.Location = new System.Drawing.Point(13, 107);
+            this.guna2Panel_ShowProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel_ShowProduct.Name = "guna2Panel_ShowProduct";
-            this.guna2Panel_ShowProduct.Size = new System.Drawing.Size(440, 571);
+            this.guna2Panel_ShowProduct.Size = new System.Drawing.Size(267, 546);
             this.guna2Panel_ShowProduct.TabIndex = 0;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.DataGridView_Product_Deal;
-            // 
-            // txtNewprice
-            // 
-            this.txtNewprice.AutoRoundedCorners = true;
-            this.txtNewprice.BorderRadius = 17;
-            this.txtNewprice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewprice.DefaultText = "";
-            this.txtNewprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNewprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNewprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNewprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewprice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNewprice.HoverState.BorderColor = System.Drawing.SystemColors.Control;
-            this.txtNewprice.Location = new System.Drawing.Point(459, 31);
-            this.txtNewprice.Name = "txtNewprice";
-            this.txtNewprice.PasswordChar = '\0';
-            this.txtNewprice.PlaceholderText = "New price";
-            this.txtNewprice.SelectedText = "";
-            this.txtNewprice.Size = new System.Drawing.Size(256, 36);
-            this.txtNewprice.TabIndex = 3;
-            this.txtNewprice.IconRightClick += new System.EventHandler(this.txtNewprice_IconRightClick);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.AutoRoundedCorners = true;
-            this.txtSearch.BorderRadius = 17;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.SystemColors.Control;
-            this.txtSearch.Location = new System.Drawing.Point(184, 31);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Search by name";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(256, 36);
-            this.txtSearch.TabIndex = 2;
             // 
             // guna2PictureBox_Product
             // 
             this.guna2PictureBox_Product.BorderRadius = 15;
             this.guna2PictureBox_Product.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox_Product.Image")));
             this.guna2PictureBox_Product.ImageRotate = 0F;
-            this.guna2PictureBox_Product.Location = new System.Drawing.Point(7, 29);
+            this.guna2PictureBox_Product.Location = new System.Drawing.Point(9, 36);
+            this.guna2PictureBox_Product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox_Product.Name = "guna2PictureBox_Product";
-            this.guna2PictureBox_Product.Size = new System.Drawing.Size(142, 134);
+            this.guna2PictureBox_Product.Size = new System.Drawing.Size(189, 165);
             this.guna2PictureBox_Product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox_Product.TabIndex = 0;
             this.guna2PictureBox_Product.TabStop = false;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.DataGridView_Product_Deal;
+            // 
             // CF_DealProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 681);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel_ListProduct);
             this.Controls.Add(this.guna2Panel_View);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CF_DealProduct";
             this.Text = "CF_DealProduct";
             this.Load += new System.EventHandler(this.CF_DealProduct_Load);

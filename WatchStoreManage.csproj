@@ -317,6 +317,12 @@
     <Compile Include="View\viewMainHomeManager.Designer.cs">
       <DependentUpon>viewMainHomeManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\viewMainHomeStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewMainHomeStaff.Designer.cs">
+      <DependentUpon>viewMainHomeStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\viewReportManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewMainHomeManager.resx">
       <DependentUpon>viewMainHomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewMainHomeStaff.resx">
+      <DependentUpon>viewMainHomeStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewReportManage.resx">
       <DependentUpon>viewReportManage.cs</DependentUpon>
@@ -429,6 +438,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-menu-rounded-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watchImage1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watchImage2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watchImage3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-facebook-messenger.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

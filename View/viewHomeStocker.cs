@@ -157,8 +157,8 @@ namespace WatchStoreManage.View
 
         private void guna2GradientButton_DealProduct_Click(object sender, EventArgs e)
         {
-            //buttonHoatDong(sender, guna2Panel_Control_CProduct);
-            //Show_Child_Form(new View.CF_DealProduct());
+            buttonHoatDong(sender, guna2Panel_Control_CProduct);
+            Show_Child_Form(new View.CF_DealProduct());
         }
 
         private void guna2Separator1_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace WatchStoreManage.View
 
         private void viewHomeStaff_Load(object sender, EventArgs e)
         {
-
+            openChildForm(new viewMainHomeStaff());
         }
         bool enumExpended = false;
         private void DetectMouse_Tick(object sender, EventArgs e)
@@ -84,11 +84,7 @@ namespace WatchStoreManage.View
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-        }
-
-        private void guna2GradientButton3_Click_1(object sender, EventArgs e)
-        {
-
+            openChildForm(new viewMainHomeStaff());
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
