@@ -29,12 +29,12 @@ namespace WatchStoreManage.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle134 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle135 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -83,7 +83,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(603, 56);
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "WELCOME TO WATCH STORE";
-            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2PictureBox3
             // 
@@ -181,7 +180,6 @@ namespace WatchStoreManage.View
             this.send.TabIndex = 1;
             this.send.Text = "Đã gửi";
             this.send.UseVisualStyleBackColor = true;
-            this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // txtTime1
             // 
@@ -203,7 +201,6 @@ namespace WatchStoreManage.View
             this.txtTime1.SelectedText = "";
             this.txtTime1.Size = new System.Drawing.Size(336, 36);
             this.txtTime1.TabIndex = 50;
-            this.txtTime1.TextChanged += new System.EventHandler(this.txtTime1_TextChanged);
             // 
             // txtTo
             // 
@@ -225,7 +222,6 @@ namespace WatchStoreManage.View
             this.txtTo.SelectedText = "";
             this.txtTo.Size = new System.Drawing.Size(127, 36);
             this.txtTo.TabIndex = 50;
-            this.txtTo.TextChanged += new System.EventHandler(this.txtTo_TextChanged);
             // 
             // txtContent1
             // 
@@ -248,30 +244,29 @@ namespace WatchStoreManage.View
             this.txtContent1.SelectedText = "";
             this.txtContent1.Size = new System.Drawing.Size(615, 165);
             this.txtContent1.TabIndex = 50;
-            this.txtContent1.TextChanged += new System.EventHandler(this.txtContent1_TextChanged);
             // 
             // tblSent
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            this.tblSent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblSent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle133.BackColor = System.Drawing.Color.White;
+            this.tblSent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle133;
+            dataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle134.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle134.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle134.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle134.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle134.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle134.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblSent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle134;
             this.tblSent.ColumnHeadersHeight = 19;
             this.tblSent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblSent.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle135.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle135.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle135.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle135.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle135.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle135.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblSent.DefaultCellStyle = dataGridViewCellStyle135;
             this.tblSent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tblSent.Location = new System.Drawing.Point(6, 231);
             this.tblSent.Name = "tblSent";
@@ -313,7 +308,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 29);
             this.guna2HtmlLabel2.TabIndex = 51;
             this.guna2HtmlLabel2.Text = "Đến:";
-            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -325,7 +319,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(89, 29);
             this.guna2HtmlLabel3.TabIndex = 59;
             this.guna2HtmlLabel3.Text = "Lúc:";
-            this.guna2HtmlLabel3.Click += new System.EventHandler(this.guna2HtmlLabel3_Click);
             // 
             // get
             // 
@@ -338,11 +331,10 @@ namespace WatchStoreManage.View
             this.get.Location = new System.Drawing.Point(184, 4);
             this.get.Name = "get";
             this.get.Padding = new System.Windows.Forms.Padding(3);
-            this.get.Size = new System.Drawing.Size(705, 392);
+            this.get.Size = new System.Drawing.Size(705, 388);
             this.get.TabIndex = 2;
             this.get.Text = "Hộp thư đến";
             this.get.UseVisualStyleBackColor = true;
-            this.get.Click += new System.EventHandler(this.get_Click);
             // 
             // txtTime2
             // 
@@ -364,7 +356,6 @@ namespace WatchStoreManage.View
             this.txtTime2.SelectedText = "";
             this.txtTime2.Size = new System.Drawing.Size(336, 36);
             this.txtTime2.TabIndex = 60;
-            this.txtTime2.TextChanged += new System.EventHandler(this.txtTime2_TextChanged);
             // 
             // txtFrom
             // 
@@ -386,7 +377,6 @@ namespace WatchStoreManage.View
             this.txtFrom.SelectedText = "";
             this.txtFrom.Size = new System.Drawing.Size(127, 36);
             this.txtFrom.TabIndex = 61;
-            this.txtFrom.TextChanged += new System.EventHandler(this.txtFrom_TextChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -398,7 +388,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(76, 29);
             this.guna2HtmlLabel4.TabIndex = 62;
             this.guna2HtmlLabel4.Text = "Từ:";
-            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // guna2HtmlLabel5
             // 
@@ -410,7 +399,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(89, 29);
             this.guna2HtmlLabel5.TabIndex = 63;
             this.guna2HtmlLabel5.Text = "Lúc:";
-            this.guna2HtmlLabel5.Click += new System.EventHandler(this.guna2HtmlLabel5_Click);
             // 
             // txtContent2
             // 
@@ -433,30 +421,29 @@ namespace WatchStoreManage.View
             this.txtContent2.SelectedText = "";
             this.txtContent2.Size = new System.Drawing.Size(616, 165);
             this.txtContent2.TabIndex = 54;
-            this.txtContent2.TextChanged += new System.EventHandler(this.txtContent2_TextChanged);
             // 
             // tblTo
             // 
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
-            this.tblTo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblTo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle136.BackColor = System.Drawing.Color.White;
+            this.tblTo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle136;
+            dataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle137.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle137.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle137.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle137.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle137.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblTo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle137;
             this.tblTo.ColumnHeadersHeight = 19;
             this.tblTo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblTo.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle138.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle138.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle138.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle138.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle138.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblTo.DefaultCellStyle = dataGridViewCellStyle138;
             this.tblTo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tblTo.Location = new System.Drawing.Point(6, 233);
             this.tblTo.Name = "tblTo";
@@ -498,11 +485,10 @@ namespace WatchStoreManage.View
             this.set.Controls.Add(this.guna2HtmlLabel6);
             this.set.Location = new System.Drawing.Point(184, 4);
             this.set.Name = "set";
-            this.set.Size = new System.Drawing.Size(705, 392);
+            this.set.Size = new System.Drawing.Size(705, 388);
             this.set.TabIndex = 3;
             this.set.Text = "Soạn tin nhắn";
             this.set.UseVisualStyleBackColor = true;
-            this.set.Click += new System.EventHandler(this.set_Click);
             // 
             // txtNameP
             // 
@@ -524,7 +510,6 @@ namespace WatchStoreManage.View
             this.txtNameP.SelectedText = "";
             this.txtNameP.Size = new System.Drawing.Size(303, 36);
             this.txtNameP.TabIndex = 68;
-            this.txtNameP.TextChanged += new System.EventHandler(this.txtNameP_TextChanged);
             // 
             // txtContent3
             // 
@@ -546,7 +531,6 @@ namespace WatchStoreManage.View
             this.txtContent3.SelectedText = "";
             this.txtContent3.Size = new System.Drawing.Size(611, 227);
             this.txtContent3.TabIndex = 67;
-            this.txtContent3.TextChanged += new System.EventHandler(this.txtContent3_TextChanged);
             // 
             // cbPick
             // 
@@ -595,7 +579,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(159, 40);
             this.guna2HtmlLabel6.TabIndex = 63;
             this.guna2HtmlLabel6.Text = "Chọn NV:";
-            this.guna2HtmlLabel6.Click += new System.EventHandler(this.guna2HtmlLabel6_Click);
             // 
             // viewMainHomeStaff
             // 
