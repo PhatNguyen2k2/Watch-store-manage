@@ -141,6 +141,7 @@ namespace WatchStoreManage.View
         {
             Close_Menu_ChildProduct();
             buttonHoatDong(sender, guna2Panel_Control_Big);
+            Show_Child_Form(new viewMainHomeStocker());
         }
 
         private void guna2GradientButton_Report_Click(object sender, EventArgs e)
@@ -164,6 +165,11 @@ namespace WatchStoreManage.View
         private void guna2Separator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewHomeStocker_Load(object sender, EventArgs e)
+        {
+            Show_Child_Form(new viewMainHomeStocker());
         }
     }
 }
