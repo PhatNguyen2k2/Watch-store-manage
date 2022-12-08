@@ -275,6 +275,12 @@
     <Compile Include="View\viewBillReportManage.Designer.cs">
       <DependentUpon>viewBillReportManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\viewCustomerManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewCustomerManage.Designer.cs">
+      <DependentUpon>viewCustomerManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\viewEmployeeManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewBillReportManage.resx">
       <DependentUpon>viewBillReportManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewCustomerManage.resx">
+      <DependentUpon>viewCustomerManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewEmployeeManage.resx">
       <DependentUpon>viewEmployeeManage.cs</DependentUpon>
@@ -459,6 +468,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-facebook-messenger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle-bin-icon-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
