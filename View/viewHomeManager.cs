@@ -16,29 +16,6 @@ namespace WatchStoreManage.View
         {
             InitializeComponent();
         }
-        bool enumExpended = false;
-        private void DetectMouse_Tick(object sender, EventArgs e)
-        {
-            if (!guna2Transition1.IsCompleted) return;
-            if (panelMenu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
-            {
-                if (!enumExpended)
-                {
-                    enumExpended = true;
-                    panelMenu.Width = 190;
-                }
-            }
-            else
-            {
-                if (enumExpended)
-                {
-                    enumExpended = false;
-                    panelMenu.Visible = false;
-                    panelMenu.Width = 63;
-                    guna2Transition1.Show(panelMenu);
-                }
-            }
-        }
         private void viewHomeManager_Load(object sender, EventArgs e)
         {
             openChildForm(new viewMainHomeManager());
@@ -69,8 +46,7 @@ namespace WatchStoreManage.View
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            ClickReport.Start();
-
+            
         }
 
         private void btnAccMana_Click(object sender, EventArgs e)
@@ -88,13 +64,11 @@ namespace WatchStoreManage.View
         private void btnReportProduct_Click(object sender, EventArgs e)
         {
             openChildForm(new viewReportManage());
-            submenuReport.Visible = false;
         }
 
         private void btnReportBill_Click(object sender, EventArgs e)
         {
             openChildForm(new viewBillReportManage());
-            submenuReport.Visible = false;
         }
         bool enumExpended2 = false;
         private void ClickReport_Tick(object sender, EventArgs e)
