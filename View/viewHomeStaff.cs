@@ -72,11 +72,6 @@ namespace WatchStoreManage.View
             // tabHomeStaff1.Visible = false;
         }
 
-        private void tabHomeStaff1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             openChildForm(new viewBillPaying());
@@ -87,14 +82,9 @@ namespace WatchStoreManage.View
             openChildForm(new viewMainHomeStaff());
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        private void guna2GradientButton5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2ControlBox2_Click(object sender, EventArgs e)
-        {
-
+            openChildForm(new viewCustomerManage());
         }
     }
 }
