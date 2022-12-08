@@ -29,10 +29,10 @@ namespace WatchStoreManage.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tbl = new Guna.UI2.WinForms.Guna2DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tblCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dateTimeBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,60 +49,61 @@ namespace WatchStoreManage.View
             this.btnEdit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbl
+            // tblCustomer
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tbl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbl.ColumnHeadersHeight = 19;
-            this.tbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbl.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tbl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tbl.Location = new System.Drawing.Point(12, 397);
-            this.tbl.Name = "tbl";
-            this.tbl.RowHeadersVisible = false;
-            this.tbl.RowHeadersWidth = 51;
-            this.tbl.RowTemplate.Height = 24;
-            this.tbl.Size = new System.Drawing.Size(948, 224);
-            this.tbl.TabIndex = 81;
-            this.tbl.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tbl.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tbl.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tbl.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tbl.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tbl.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tbl.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tbl.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbl.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tbl.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tbl.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbl.ThemeStyle.HeaderStyle.Height = 19;
-            this.tbl.ThemeStyle.ReadOnly = false;
-            this.tbl.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tbl.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tbl.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tbl.ThemeStyle.RowsStyle.Height = 24;
-            this.tbl.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tbl.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
+            this.tblCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.tblCustomer.ColumnHeadersHeight = 19;
+            this.tblCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblCustomer.DefaultCellStyle = dataGridViewCellStyle33;
+            this.tblCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tblCustomer.Location = new System.Drawing.Point(12, 397);
+            this.tblCustomer.Name = "tblCustomer";
+            this.tblCustomer.RowHeadersVisible = false;
+            this.tblCustomer.RowHeadersWidth = 51;
+            this.tblCustomer.RowTemplate.Height = 24;
+            this.tblCustomer.Size = new System.Drawing.Size(948, 224);
+            this.tblCustomer.TabIndex = 81;
+            this.tblCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tblCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tblCustomer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tblCustomer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tblCustomer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tblCustomer.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.tblCustomer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tblCustomer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tblCustomer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tblCustomer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblCustomer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tblCustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tblCustomer.ThemeStyle.HeaderStyle.Height = 19;
+            this.tblCustomer.ThemeStyle.ReadOnly = false;
+            this.tblCustomer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tblCustomer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tblCustomer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblCustomer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblCustomer.ThemeStyle.RowsStyle.Height = 24;
+            this.tblCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.tblCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblCustomer_CellContentClick);
             // 
             // dateTimeBirth
             // 
@@ -127,9 +128,9 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(686, 100);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(99, 24);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(165, 24);
             this.guna2HtmlLabel4.TabIndex = 74;
-            this.guna2HtmlLabel4.Text = "Ngày sinh:";
+            this.guna2HtmlLabel4.Text = "Birthday:";
             // 
             // txtAddress
             // 
@@ -151,6 +152,7 @@ namespace WatchStoreManage.View
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(225, 95);
             this.txtAddress.TabIndex = 75;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // txtName
             // 
@@ -171,6 +173,7 @@ namespace WatchStoreManage.View
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(225, 36);
             this.txtName.TabIndex = 76;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // guna2HtmlLabel2
             // 
@@ -179,9 +182,9 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(354, 100);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(71, 24);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(131, 24);
             this.guna2HtmlLabel2.TabIndex = 72;
-            this.guna2HtmlLabel2.Text = "Tên KH:";
+            this.guna2HtmlLabel2.Text = "Name:";
             // 
             // guna2HtmlLabel10
             // 
@@ -201,9 +204,9 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(354, 180);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(71, 24);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(131, 24);
             this.guna2HtmlLabel7.TabIndex = 70;
-            this.guna2HtmlLabel7.Text = "Địa chỉ:";
+            this.guna2HtmlLabel7.Text = "Address:";
             // 
             // txtPhone
             // 
@@ -224,6 +227,7 @@ namespace WatchStoreManage.View
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(205, 36);
             this.txtPhone.TabIndex = 77;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // guna2HtmlLabel5
             // 
@@ -232,9 +236,9 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(43, 180);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 24);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(122, 24);
             this.guna2HtmlLabel5.TabIndex = 69;
-            this.guna2HtmlLabel5.Text = "SĐT:";
+            this.guna2HtmlLabel5.Text = "Phone:";
             // 
             // txtFindId
             // 
@@ -256,6 +260,7 @@ namespace WatchStoreManage.View
             this.txtFindId.SelectedText = "";
             this.txtFindId.Size = new System.Drawing.Size(169, 36);
             this.txtFindId.TabIndex = 78;
+            this.txtFindId.TextChanged += new System.EventHandler(this.txtFindId_TextChanged);
             // 
             // txtId
             // 
@@ -277,6 +282,7 @@ namespace WatchStoreManage.View
             this.txtId.SelectedText = "";
             this.txtId.Size = new System.Drawing.Size(205, 36);
             this.txtId.TabIndex = 79;
+            this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
             // 
             // gunat2HtmlLabel3
             // 
@@ -287,7 +293,7 @@ namespace WatchStoreManage.View
             this.gunat2HtmlLabel3.Name = "gunat2HtmlLabel3";
             this.gunat2HtmlLabel3.Size = new System.Drawing.Size(71, 24);
             this.gunat2HtmlLabel3.TabIndex = 73;
-            this.gunat2HtmlLabel3.Text = "Mã KH:";
+            this.gunat2HtmlLabel3.Text = "Id:";
             // 
             // guna2HtmlLabel1
             // 
@@ -320,7 +326,8 @@ namespace WatchStoreManage.View
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(152, 36);
             this.btnEdit.TabIndex = 84;
-            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Text = "Update";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -342,7 +349,8 @@ namespace WatchStoreManage.View
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(152, 36);
             this.btnDelete.TabIndex = 83;
-            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -364,7 +372,8 @@ namespace WatchStoreManage.View
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(152, 36);
             this.btnAdd.TabIndex = 82;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // viewCustomerManage
             // 
@@ -374,7 +383,7 @@ namespace WatchStoreManage.View
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.tbl);
+            this.Controls.Add(this.tblCustomer);
             this.Controls.Add(this.dateTimeBirth);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtAddress);
@@ -391,7 +400,8 @@ namespace WatchStoreManage.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewCustomerManage";
             this.Text = "viewCustomerManage";
-            ((System.ComponentModel.ISupportInitialize)(this.tbl)).EndInit();
+            this.Load += new System.EventHandler(this.viewCustomerManage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,7 +411,7 @@ namespace WatchStoreManage.View
         private Guna.UI2.WinForms.Guna2GradientButton btnEdit;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
-        private Guna.UI2.WinForms.Guna2DataGridView tbl;
+        private Guna.UI2.WinForms.Guna2DataGridView tblCustomer;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimeBirth;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
