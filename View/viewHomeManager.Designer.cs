@@ -32,8 +32,6 @@ namespace WatchStoreManage.View
             this.components = new System.ComponentModel.Container();
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewHomeManager));
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
-            this.guna2Transition2 = new Guna.UI2.WinForms.Guna2Transition();
             this.submenuReport = new Guna.UI2.WinForms.Guna2Panel();
             this.btnReportBill = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnReportProduct = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -55,7 +53,7 @@ namespace WatchStoreManage.View
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            this.ClickReport = new System.Windows.Forms.Timer(this.components);
+            this.DetectMouse = new System.Windows.Forms.Timer(this.components);
             this.submenuReport.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -64,33 +62,11 @@ namespace WatchStoreManage.View
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Transition2
-            // 
-            this.guna2Transition2.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
-            this.guna2Transition2.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition2.DefaultAnimation = animation1;
-            // 
             // submenuReport
             // 
             this.submenuReport.Controls.Add(this.btnReportBill);
             this.submenuReport.Controls.Add(this.btnReportProduct);
             this.guna2Transition1.SetDecoration(this.submenuReport, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.submenuReport, Guna.UI2.AnimatorNS.DecorationType.None);
             this.submenuReport.Location = new System.Drawing.Point(7, 395);
             this.submenuReport.Name = "submenuReport";
             this.submenuReport.Size = new System.Drawing.Size(260, 125);
@@ -104,7 +80,6 @@ namespace WatchStoreManage.View
             this.btnReportBill.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportBill.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnReportBill, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnReportBill, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnReportBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnReportBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnReportBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -139,7 +114,6 @@ namespace WatchStoreManage.View
             this.btnReportProduct.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportProduct.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnReportProduct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnReportProduct, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnReportProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnReportProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnReportProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -171,7 +145,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(8, 32);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
@@ -184,7 +157,6 @@ namespace WatchStoreManage.View
             // 
             this.panelChildForm.Controls.Add(this.guna2Panel2);
             this.guna2Transition1.SetDecoration(this.panelChildForm, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.panelChildForm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(351, 0);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
@@ -199,7 +171,6 @@ namespace WatchStoreManage.View
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Transition1.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -211,7 +182,6 @@ namespace WatchStoreManage.View
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2Transition1.SetDecoration(this.guna2ControlBox3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2ControlBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox3.Location = new System.Drawing.Point(854, 0);
@@ -224,7 +194,6 @@ namespace WatchStoreManage.View
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
@@ -237,7 +206,6 @@ namespace WatchStoreManage.View
             // guna2Separator1
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.White;
-            this.guna2Transition2.SetDecoration(this.guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
             this.guna2Separator1.Location = new System.Drawing.Point(8, 35);
@@ -251,7 +219,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
@@ -269,7 +236,6 @@ namespace WatchStoreManage.View
             this.guna2Panel1.Controls.Add(this.btnHome);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Transition1.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(84, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -285,7 +251,6 @@ namespace WatchStoreManage.View
             this.btnAccMana.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccMana.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnAccMana, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnAccMana, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnAccMana.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAccMana.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAccMana.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -320,7 +285,6 @@ namespace WatchStoreManage.View
             this.btnReport.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnReport, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnReport, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -355,7 +319,6 @@ namespace WatchStoreManage.View
             this.btnProMana.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProMana.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnProMana, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnProMana, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnProMana.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnProMana.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnProMana.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -390,7 +353,6 @@ namespace WatchStoreManage.View
             this.btnHome.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.CheckedState.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Transition1.SetDecoration(this.btnHome, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnHome, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -423,7 +385,6 @@ namespace WatchStoreManage.View
             this.panelMenu.Controls.Add(this.guna2GradientButton1);
             this.panelMenu.Controls.Add(this.guna2PictureBox1);
             this.guna2Transition1.SetDecoration(this.panelMenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.panelMenu, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(185)))), ((int)(((byte)(227)))));
             this.panelMenu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(126)))), ((int)(((byte)(225)))));
@@ -441,7 +402,6 @@ namespace WatchStoreManage.View
             this.guna2GradientButton2.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.CheckedState.ForeColor = System.Drawing.Color.White;
             this.guna2Transition1.SetDecoration(this.guna2GradientButton2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2GradientButton2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -476,7 +436,6 @@ namespace WatchStoreManage.View
             this.guna2GradientButton1.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.CheckedState.ForeColor = System.Drawing.Color.White;
             this.guna2Transition1.SetDecoration(this.guna2GradientButton1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.guna2GradientButton1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -505,7 +464,6 @@ namespace WatchStoreManage.View
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition2.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(185)))), ((int)(((byte)(227)))));
@@ -529,28 +487,27 @@ namespace WatchStoreManage.View
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
-            // ClickReport
+            // DetectMouse
             // 
-            this.ClickReport.Enabled = true;
-            this.ClickReport.Interval = 10;
-            this.ClickReport.Tick += new System.EventHandler(this.ClickReport_Tick);
+            this.DetectMouse.Enabled = true;
+            this.DetectMouse.Tick += new System.EventHandler(this.DetectMouse_Tick);
             // 
             // viewHomeManager
             // 
@@ -561,7 +518,6 @@ namespace WatchStoreManage.View
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelMenu);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewHomeManager";
             this.Text = "viewHomeManager";
@@ -577,8 +533,6 @@ namespace WatchStoreManage.View
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Transition guna2Transition2;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2GradientButton btnAccMana;
         private Guna.UI2.WinForms.Guna2Panel submenuReport;
@@ -595,11 +549,11 @@ namespace WatchStoreManage.View
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientPanel panelMenu;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.Timer ClickReport;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Timer DetectMouse;
     }
 }

@@ -70,23 +70,23 @@ namespace WatchStoreManage.View
         {
             openChildForm(new viewBillReportManage());
         }
-        bool enumExpended2 = false;
-        private void ClickReport_Tick(object sender, EventArgs e)
+        bool enumExpended = false;
+        private void DetectMouse_Tick(object sender, EventArgs e)
         {
-            if (!guna2Transition2.IsCompleted) return;
+            if (!guna2Transition1.IsCompleted) return;
             if (panelMenu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
             {
-                if (!enumExpended2)
+                if (!enumExpended)
                 {
-                    enumExpended2 = true;
-                    btnAccMana.Height = 2;
+                    enumExpended = true;
+                    panelMenu.Width = 190;
                 }
             }
             else
             {
-                if (enumExpended2)
+                if (enumExpended)
                 {
-                    enumExpended2 = false;
+                    enumExpended = false;
                     panelMenu.Visible = false;
                     panelMenu.Width = 63;
                     guna2Transition1.Show(panelMenu);
