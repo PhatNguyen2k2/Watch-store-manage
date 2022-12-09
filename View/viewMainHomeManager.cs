@@ -21,9 +21,7 @@ namespace WatchStoreManage.View
         private void viewMainHomeManager_Load(object sender, EventArgs e)
         {
             tabControlMess.Hide();
-            initTableFrom();
-            initTableTo();
-            initComboBoxPosition();
+            panelUser.Hide();
         }
         public void initTableFrom()
         {
@@ -66,6 +64,14 @@ namespace WatchStoreManage.View
             {
                 cbPick.Items.Add(x.MANV);
             });
+        }
+        public void initUserDetail()
+        {
+            NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == viewLogin.EmployeeId);
+            txtName.Text = nv.TENNV;
+            dateTimeBirth.Value = nv.NGAYSINH;
+            txtPhone.Text = nv.SDT;
+            txtAddress.Text = nv.DIACHI;
         }
         private void tblSent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,23 +121,89 @@ namespace WatchStoreManage.View
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
+            panelUser.Hide();
+            initTableFrom();
+            initTableTo();
+            initComboBoxPosition();
             tabControlMess.Show();
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             tabControlMess.Hide();
+            panelUser.Hide();
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
             tabControlMess.Hide();
+            panelUser.Hide();
         }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
             tabControlMess.Hide();
+            panelUser.Hide();
         }
 
+        private void User_Click(object sender, EventArgs e)
+        {
+            tabControlMess.Hide();
+            initUserDetail();
+            panelUser.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == viewLogin.EmployeeId);
+            if (txtName.Text == "" || txtPhone.Text == "" || txtAddress.Text == "")
+            {
+                MessageBox.Show("Không được để trống trường nào");
+            }
+            else if (txtPhone.Text.Substring(0, 1) != "0" || txtPhone.Text.Length < 10)
+            {
+                MessageBox.Show("SĐT không hợp lệ");
+            }
+            else if (dateTimeBirth.Value >= nv.NGAYVAOLAM)
+            {
+                MessageBox.Show("Ngày sinh phải nhỏ hơn ngày vào làm");
+            }
+            else
+            {
+                nv.TENNV = txtName.Text;
+                nv.NGAYSINH = dateTimeBirth.Value;
+                nv.SDT = txtPhone.Text;
+                nv.DIACHI = txtAddress.Text;
+                Program.context.SaveChanges();
+                MessageBox.Show("Sửa thành công");
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if(txtName.Text.Length > 200)
+            {
+                MessageBox.Show("Quá kí tự");
+                txtName.Text = "";
+            }
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhone.Text.Length > 11)
+            {
+                MessageBox.Show("Quá kí tự");
+                txtPhone.Text = "";
+            }
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAddress.Text.Length > 200)
+            {
+                MessageBox.Show("Quá kí tự");
+                txtAddress.Text = "";
+            }
+        }
     }
 }
