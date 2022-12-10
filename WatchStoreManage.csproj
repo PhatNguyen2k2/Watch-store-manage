@@ -341,6 +341,12 @@
     <Compile Include="View\viewReportManage.Designer.cs">
       <DependentUpon>viewReportManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\viewWarehouseStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewWarehouseStatistic.Designer.cs">
+      <DependentUpon>viewWarehouseStatistic.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewReportManage.resx">
       <DependentUpon>viewReportManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewWarehouseStatistic.resx">
+      <DependentUpon>viewWarehouseStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\WatchStoreManage.Model.PrintBill.datasource" />
