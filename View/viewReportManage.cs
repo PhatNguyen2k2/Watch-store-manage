@@ -17,7 +17,6 @@ namespace WatchStoreManage.View
 
         private void viewReportManage_Load(object sender, EventArgs e)
         {
-            int i = 0;
             initProduct();
             List<HOADON> hd = Program.context.HOADONs.OrderBy(n => n.NGAYLAPHOADON).ToList();
             hd.ForEach(x =>
@@ -25,10 +24,6 @@ namespace WatchStoreManage.View
                 if (!cbYear.Items.Contains(x.NGAYLAPHOADON.Year))
                 {
                     cbYear.Items.Add(x.NGAYLAPHOADON.Year);
-                }
-                else
-                {
-                    i++;
                 }
             });
             cbMonth.Hide();
