@@ -60,13 +60,11 @@ namespace WatchStoreManage.View
             string result = new String(decoded_char);
             return result;
         }
-        private void viewLogin_Load(object sender, EventArgs e)
-        {
-        }
 
         private void btnQr_Click(object sender, EventArgs e)
         {
-            openChildForm(new viewLogin2());
+            //openChildForm(new viewLogin2());
+            QRPanel.Show();
         }
 
         private void chbShowPass_CheckedChanged(object sender, EventArgs e)
@@ -80,6 +78,13 @@ namespace WatchStoreManage.View
             {
                 MessageBox.Show("please fill username and password");
                 return;
+            }else if(txtId.Text == "NVTNK00" || txtId.Text == "NVTKK00")
+            {
+                if (!chbForgetPass.Checked)
+                {
+                    MessageBox.Show("Đây là tài khoản khách, hãy chọn quên mật khẩu!");
+                    return;
+                }
             }
             NHANVIEN nv = Program.context.NHANVIENs.FirstOrDefault(n => n.MANV == txtId.Text);
             if (nv != null)
@@ -128,6 +133,111 @@ namespace WatchStoreManage.View
                 return;
             }
         }
-            
+
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[camPick.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                txtcode.Invoke(new MethodInvoker(delegate ()
+                {
+                    txtcode.Text = result.ToString();
+                }));
+            }
+            pic.Image = bitmap;
+        }
+
+        private void viewLogin_Load(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo device in filterInfoCollection)
+                camPick.Items.Add(device.Name);
+            camPick.SelectedIndex = 1;
+            QRPanel.Hide();
+        }
+        public void turnOffCamera()
+        {
+            if (videoCaptureDevice != null)
+            {
+                if (videoCaptureDevice.IsRunning)
+                {
+                    videoCaptureDevice.SignalToStop();
+                    videoCaptureDevice = null;
+                }
+            }
+        }
+        private void viewLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            turnOffCamera();
+        }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
+            List<NHANVIEN> lnv = Program.context.NHANVIENs.Where(n => n.PASSWORDS != null).ToList();
+            NHANVIEN nv = new NHANVIEN();
+            lnv.ForEach(x =>
+            {
+                if (viewLogin.DecodeFrom64(x.PASSWORDS) == txtcode.Text)
+                {
+                    nv = x;
+                }
+            });
+            if (nv != null)
+            {
+                viewLogin.EmployeeId = nv.MANV;
+                switch (nv.MANV.Substring(0, 4))
+                {
+                    case "NVTN":
+                        {
+                            viewHomeStaff vhs = new viewHomeStaff();
+                            vhs.Show();
+                            Hide();
+                            turnOffCamera();
+                        }
+                        break;
+                    case "NVTK":
+                        {
+                            viewHomeStocker vhs = new viewHomeStocker();
+                            vhs.Show();
+                            Hide();
+                            turnOffCamera();
+                        }
+                        break;
+                    case "QLCH":
+                        {
+                            viewHomeManager vhm = new viewHomeManager();
+                            vhm.Show();
+                            Hide();
+                            turnOffCamera();
+                        }
+                        break;
+                    default:
+                        {
+                            return;
+                        }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy người dùng");
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            QRPanel.Hide();
+        }
     }
 }
