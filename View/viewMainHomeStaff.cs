@@ -144,6 +144,11 @@ namespace WatchStoreManage.View
         {
             tabControlMess.Hide();
             panelUser.Hide();
+            if(viewLogin.EmployeeId == "NVTNK00")
+            {
+                User.Hide();
+                guna2CirclePictureBox1.Hide();
+            }
         }
 
         private void User_Click(object sender, EventArgs e)

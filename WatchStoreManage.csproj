@@ -239,12 +239,6 @@
     <Compile Include="Model\SANPHAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\CF_DealProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CF_DealProduct.Designer.cs">
-      <DependentUpon>CF_DealProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\CF_ProcductManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,12 +305,6 @@
     <Compile Include="View\viewLogin.Designer.cs">
       <DependentUpon>viewLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\viewLogin2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\viewLogin2.Designer.cs">
-      <DependentUpon>viewLogin2.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\viewMainHomeManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,9 +345,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\CF_DealProduct.resx">
-      <DependentUpon>CF_DealProduct.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\CF_ProcductManage.resx">
       <DependentUpon>CF_ProcductManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,9 +378,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewLogin.resx">
       <DependentUpon>viewLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\viewLogin2.resx">
-      <DependentUpon>viewLogin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\viewMainHomeManager.resx">
       <DependentUpon>viewMainHomeManager.cs</DependentUpon>
