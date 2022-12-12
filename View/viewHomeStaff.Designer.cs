@@ -329,6 +329,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(20, 0);
             this.guna2GradientButton2.UseTransparentBackground = true;
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click_1);
             // 
             // guna2GradientButton1
             // 

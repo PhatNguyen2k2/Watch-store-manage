@@ -45,11 +45,11 @@ namespace WatchStoreManage.View
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelMenu = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Panel_Content = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2Panel_Content = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.DetectMouse = new System.Windows.Forms.Timer(this.components);
             this.Timer_Product = new System.Windows.Forms.Timer(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -295,6 +295,7 @@ namespace WatchStoreManage.View
             this.guna2GradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton2.TextOffset = new System.Drawing.Point(20, 0);
             this.guna2GradientButton2.UseTransparentBackground = true;
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click_1);
             // 
             // guna2GradientButton1
             // 
@@ -393,19 +394,6 @@ namespace WatchStoreManage.View
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "WATCH STORE";
             // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.Red;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1261, 0);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
-            this.guna2ControlBox2.TabIndex = 20;
-            // 
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.guna2GradientButton2);
@@ -420,6 +408,17 @@ namespace WatchStoreManage.View
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(84, 681);
             this.panelMenu.TabIndex = 19;
+            // 
+            // guna2Panel_Content
+            // 
+            this.guna2Panel_Content.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel_Content.Controls.Add(this.guna2ControlBox3);
+            this.guna2Transition1.SetDecoration(this.guna2Panel_Content, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel_Content.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel_Content.Name = "guna2Panel_Content";
+            this.guna2Panel_Content.Size = new System.Drawing.Size(1323, 681);
+            this.guna2Panel_Content.TabIndex = 22;
             // 
             // guna2ControlBox1
             // 
@@ -447,16 +446,18 @@ namespace WatchStoreManage.View
             this.guna2ControlBox3.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox3.TabIndex = 17;
             // 
-            // guna2Panel_Content
+            // guna2ControlBox2
             // 
-            this.guna2Panel_Content.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel_Content.Controls.Add(this.guna2ControlBox3);
-            this.guna2Transition1.SetDecoration(this.guna2Panel_Content, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel_Content.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel_Content.Name = "guna2Panel_Content";
-            this.guna2Panel_Content.Size = new System.Drawing.Size(1323, 681);
-            this.guna2Panel_Content.TabIndex = 22;
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1261, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
+            this.guna2ControlBox2.TabIndex = 20;
             // 
             // DetectMouse
             // 
@@ -512,13 +513,13 @@ namespace WatchStoreManage.View
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2GradientPanel panelMenu;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Content;
         private System.Windows.Forms.Timer DetectMouse;
         private System.Windows.Forms.Timer Timer_Product;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     }
 }

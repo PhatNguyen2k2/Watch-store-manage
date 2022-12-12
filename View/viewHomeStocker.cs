@@ -133,8 +133,9 @@ namespace WatchStoreManage.View
 
         private void guna2GradientButton_Product_Click(object sender, EventArgs e)
         {
-            Timer_Product.Start();
-            buttonHoatDong(sender, guna2Panel_Control_Big);
+            //Timer_Product.Start();
+            Show_Child_Form(new View.CF_ProcductManage());
+            //buttonHoatDong(sender, guna2Panel_Control_Big);
         }
 
         private void guna2GradientButton_Home_Click(object sender, EventArgs e)
@@ -154,13 +155,13 @@ namespace WatchStoreManage.View
         private void guna2GradientButton_ProductManage_Click(object sender, EventArgs e)
         {
             buttonHoatDong(sender, guna2Panel_Control_CProduct);
-            Show_Child_Form(new View.CF_ProcductManage());
+            //Show_Child_Form(new View.CF_ProcductManage());
         }
 
         private void guna2GradientButton_DealProduct_Click(object sender, EventArgs e)
         {
             buttonHoatDong(sender, guna2Panel_Control_CProduct);
-            Show_Child_Form(new View.CF_DealProduct());
+            //Show_Child_Form(new View.CF_DealProduct());
         }
 
         private void guna2Separator1_Click(object sender, EventArgs e)
@@ -171,6 +172,13 @@ namespace WatchStoreManage.View
         private void viewHomeStocker_Load(object sender, EventArgs e)
         {
             Show_Child_Form(new viewMainHomeStocker());
+        }
+
+        private void guna2GradientButton2_Click_1(object sender, EventArgs e)
+        {
+            viewLogin viewLogin = new viewLogin();
+            viewLogin.Show();
+            Hide();
         }
     }
 }

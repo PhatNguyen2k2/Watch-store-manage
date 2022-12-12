@@ -86,5 +86,12 @@ namespace WatchStoreManage.View
         {
             openChildForm(new viewCustomerManage());
         }
+
+        private void guna2GradientButton2_Click_1(object sender, EventArgs e)
+        {
+            viewLogin viewLogin = new viewLogin();
+            viewLogin.Show();
+            Hide();
+        }
     }
 }
