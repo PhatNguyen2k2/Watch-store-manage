@@ -204,5 +204,11 @@ namespace WatchStoreManage.View
                 txtAddress.Text = "";
             }
         }
+
+        private void viewMainHomeStocker_Load(object sender, EventArgs e)
+        {
+            tabControlMess.Hide();
+            panelUser.Hide();
+        }
     }
 }

@@ -40,6 +40,10 @@ namespace WatchStoreManage.View
             {
                 sp = Program.context.SANPHAMs.OrderByDescending(n => n.GIAMUA).ToList();
             }else sp = Program.context.SANPHAMs.OrderBy(n => n.GIAMUA).ToList();
+            sp.ForEach(x =>
+            {
+                barChartData.DataPoints.Add(x.MASP, (double)x.GIAMUA);
+            });
         }
         private void viewWarehouseStatistic_Load(object sender, EventArgs e)
         {

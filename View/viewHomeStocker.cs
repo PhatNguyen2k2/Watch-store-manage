@@ -148,6 +148,7 @@ namespace WatchStoreManage.View
         {
             Close_Menu_ChildProduct();
             buttonHoatDong(sender, guna2Panel_Control_Big);
+            Show_Child_Form(new viewWarehouseStatistic());
         }
 
         private void guna2GradientButton_ProductManage_Click(object sender, EventArgs e)
